@@ -62,9 +62,11 @@ export default async function Home() {
                 <section>
                     <article>
                         <header className="pb-4">
-                            <div className="flex justify-between items-center">
-                                <h3 className={`${main.className} text-xl`}>Cabra Sports - Remote</h3>
-                                <span className={`${main.className}`}>Aug 2023 - Current</span>
+                            <div className="grid md:grid-cols-2">
+                                <div className="flex gap-1">
+                                    <h3 className={`${main.className} text-left text-xl`}>Cabra Sports - Remote</h3>
+                                </div>
+                                <span className={`${main.className} md:text-right`}>Aug 2023 - Current</span>
                             </div>
                             <p>Full stack product developer using Javascript.</p>
                         </header>
@@ -99,9 +101,9 @@ export default async function Home() {
                 <section>
                     <article>
                         <header className="py-4">
-                            <div className="flex justify-between items-center">
+                            <div className="grid md:grid-cols-2">
                                 <h3 className={`${main.className} text-xl`}>Suma Wealth - Remote</h3>
-                                <span className={`${main.className}`}>Jun 2022 - Feb 2023</span>
+                                <span className={`${main.className} md:text-right`}>Jun 2022 - Feb 2023</span>
                             </div>
                             <p>Mostly front end development using Javascript.</p>
                         </header>
