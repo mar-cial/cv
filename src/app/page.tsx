@@ -47,7 +47,7 @@ export default async function Home() {
                         I am a software developer with over a year of experience developing products for startups.
                     </p>
                     <p>
-                        Straight up, I'm a fun and easy going guy who doesn't take things too seriously (that sounded like a dating app bio),
+                        Straight up, I&apos;m a fun and easy going guy who doesn&apos;t take things too seriously (that sounded like a dating app bio),
                         but I am responsible for my code, committed to my projects, and deeply, deeply interested in
                         software development.
                     </p>
@@ -72,7 +72,7 @@ export default async function Home() {
                         <div className="flex flex-col gap-1">
                             <p className="gap-1">
                                 <a href="https://cabragaming.com" target="_blank" className="font-main font-semibold after:content-['↗'] hover:underline">Cabra Gaming&thinsp;</a>&thinsp;
-                                is a gaming platform where you can participate in "Quinielas", betting on your favorite NFL and
+                                is a gaming platform where you can participate in &quot;Quinielas&quot;, betting on your favorite NFL and
                                 futbol teams of the week and winning prizes if you get it right.
                             </p>
                             <p>
@@ -89,8 +89,8 @@ export default async function Home() {
                                 </ul>
                             </div>
                             <p>
-                                Our website went live after 2 months of development, and so far we've gotten 700 registered users and a little over a thousand picks with a
-                                lot of great features to come!
+                                Our website went live after 2 months of development, and so far we&apos;ve gotten 700 registered users and a
+                                little over a thousand picks with a lot of great features to come!
                             </p>
                         </div>
                     </article>
