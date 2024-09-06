@@ -18,7 +18,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${inter.className} p-8 container mx-auto max-w-screen-sm`}
+                className={`${inter.className} p-4 container mx-auto max-w-screen-sm`}
             >
                 <nav className="flex justify-between items-center pb-4">
                     <Link href="/">Home</Link>
@@ -30,6 +30,9 @@ export default function RootLayout({
                     </Link>
                 </nav>
                 {children}
+                <footer>
+                    <div>Contact me</div>
+                </footer>
             </body>
         </html>
     );

@@ -18,7 +18,7 @@ export default function PerformanceChart({ data }: { data: Data[] }) {
                 <XAxis dataKey="name" />
                 <YAxis />
                 <CartesianGrid strokeOpacity={0.1} />
-                <Line type="monotone" dataKey="uv" stroke="#ffa500" strokeWidth={2} />
+                <Line type="monotone" dataKey="uv" stroke="#FB923C" strokeWidth={2} />
                 <Line type="monotone" dataKey="pv" stroke="#005aff" strokeWidth={2} />
                 <Tooltip />
             </LineChart>

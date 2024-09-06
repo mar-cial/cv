@@ -1,100 +1,7 @@
-import { Redis } from "@upstash/redis";
-import { auth } from "../auth";
-import { Suspense } from "react";
-import { Session } from "next-auth";
+import { UserDetails, UserDetailsLoader } from "@/components/user/details";
 import PerformanceContainer from "@/components/user/performance-container";
-import Image from "next/image";
-
-function UserDetailsLoader() {
-    return (
-        <section className="grid grid-cols-4 p-2 my-6 rounded-md bg-zinc-800">
-            <section className="flex justify-center items-center p-2">
-                <div className="w-5/6 h-auto rounded-full aspect-square bg-zinc-700"></div>
-            </section>
-            <section className="col-span-3 p-2">
-                <section>
-                    <h3 className="text-xs uppercase text-zinc-300">Username</h3>
-                    <p className="text-lg">Not logged in</p>
-                </section>
-
-                <section>
-                    <div className="text-xs uppercase text-zinc-300">Score</div>
-                    <div className="text-lg">-</div>
-                </section>
-            </section>
-        </section>
-    );
-}
-
-function UserDetailsPulic() {
-    return (
-        <section className="grid grid-cols-4 p-2 my-6 rounded-md bg-zinc-800">
-            <section className="flex justify-center items-center p-2">
-                <div className="w-5/6 h-auto rounded-full aspect-square bg-zinc-700"></div>
-            </section>
-            <section className="col-span-3 p-2">
-                <section>
-                    <h3 className="text-xs uppercase text-zinc-300">Username</h3>
-                    <p className="text-lg">Not logged in</p>
-                </section>
-
-                <section>
-                    <div className="text-xs uppercase text-zinc-300">Score</div>
-                    <div className="text-lg">-</div>
-                </section>
-            </section>
-        </section>
-    );
-}
-
-async function UserDetails() {
-    const session = await auth();
-    if (!session) {
-        return <UserDetailsPulic />;
-    }
-
-    const redis = Redis.fromEnv();
-
-    const response: string | null = await redis.get(
-        `user:${session.user?.id}:username`,
-    );
-
-    return (
-        <section className="grid grid-cols-4 p-2 my-6 rounded-md bg-zinc-800">
-            <section className="flex justify-center items-center p-2">
-                <Image
-                    src={session.user?.image || ""}
-                    alt="user image"
-                    width={100}
-                    height={100}
-                    className="object-cover rounded-full"
-                />
-            </section>
-            <section className="col-span-3 p-2">
-                <section>
-                    <h3 className="text-xs uppercase text-zinc-300">Username</h3>
-                    <p className="text-lg">{`${response || "error"}`}</p>
-                </section>
-
-                <section>
-                    <div className="text-xs uppercase text-zinc-300">Score</div>
-                    <div className="text-lg">-</div>
-                </section>
-            </section>
-        </section>
-    );
-}
-
-async function getUserScore({
-    session,
-    redis,
-}: {
-    session: Session;
-    redis: Redis;
-}) {
-    const score = await redis.get(`user:${session.user?.id}:score`);
-    return score;
-}
+import TransactionsContainer from "@/components/user/transactions-container";
+import { Suspense } from "react";
 
 export default function Page() {
     return (
@@ -108,17 +15,72 @@ export default function Page() {
                 <p>
                     Create an account with Google authentication to see what can be done.
                 </p>
+                <p className="text-orange-400">
+                    The following data is fabricated and doesn't mean anything.
+                </p>
             </section>
 
             <section>
                 <Suspense fallback={<UserDetailsLoader />}>
                     <UserDetails />
                 </Suspense>
+
+                <article>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+                        soluta praesentium eius amet quos dolores, asperiores itaque est,
+                        fugit dignissimos veniam facere quasi fuga obcaecati dolor, ea magni
+                        perferendis omnis?
+                    </p>
+                </article>
             </section>
 
-            <section className="p-2 rounded-md bg-zinc-800">
-                <header className="p-2 text-xl font-semibold">Performance</header>
-                <PerformanceContainer />
+            <section className="flex flex-col gap-4">
+                <section className="p-2 rounded-md bg-zinc-800">
+                    <header className="p-2 text-xl font-semibold">Performance</header>
+
+                    <Suspense
+                        fallback={
+                            <section className="flex justify-center items-center h-[200px]">
+                                <div className="text-xl font-semibold">Loading</div>
+                            </section>
+                        }
+                    >
+                        <PerformanceContainer />
+                    </Suspense>
+                </section>
+
+                <section className="p-2 rounded-md bg-zinc-800">
+                    <header className="p-2 text-xl font-semibold">
+                        Income/expense pie chart
+                    </header>
+
+                    <Suspense
+                        fallback={
+                            <section className="flex justify-center items-center h-[200px]">
+                                <div className="text-xl font-semibold">Loading</div>
+                            </section>
+                        }
+                    >
+                        <TransactionsContainer />
+                    </Suspense>
+                </section>
+            </section>
+
+            <section className="my-4">
+                <header className="">
+                    <h2 className="text-2xl font-semibold">
+                        Give transparency to your users with responsive and dynamic graphs.
+                    </h2>
+                </header>
+
+                <article>
+                    <p>
+                        I can integrate your API's to display a custom, interactive and
+                        dynamic graphs. Bank transactions, performance, any data that can be
+                        tracked we can display in a graph.
+                    </p>
+                </article>
             </section>
         </main>
     );
