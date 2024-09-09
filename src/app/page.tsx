@@ -47,6 +47,26 @@ export default function Page() {
                     </div>
                 </article>
             </section>
+
+            <section>
+                <header>
+                    <h2 className="text-2xl font-bold">API Integrations</h2>
+                </header>
+
+                <article>
+                    <header>
+                        <h3>ASDF</h3>
+                    </header>
+                </article>
+            </section>
+
+            <section>
+                <header>
+                    <h2 className="text-2xl font-bold">
+                        User authentication and authorization
+                    </h2>
+                </header>
+            </section>
         </main>
     );
 }

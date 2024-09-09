@@ -1,10 +1,7 @@
-import { UserDetails, UserDetailsLoader } from "@/components/user/details";
 import PageHeader from "@/components/user/page-header";
-import PerformanceContainer from "@/components/user/performance-container";
-import TransactionsContainer from "@/components/user/transactions-container";
-import { Suspense } from "react";
 import { Performance } from "./performance";
 import { IncomeAndExpense } from "./income-and-expense";
+import SankeyGraph from "./sankey";
 
 export default function Page() {
     return (
@@ -56,7 +53,10 @@ export default function Page() {
             <section className="flex flex-col gap-4">
                 <section>
                     <header className="p-2 text-xl font-semibold">
-                        <h2 className="text-xl font-semibold">Performance</h2>
+                        <h2 className="text-xl font-semibold">
+                            Performance graphs for health, analytics, generic tracking of any
+                            kind
+                        </h2>
                     </header>
                     <article>
                         <Performance />
@@ -65,26 +65,36 @@ export default function Page() {
 
                 <section>
                     <header className="p-2 text-xl font-semibold">
-                        <h2 className="text-xl font-semibold">Income and outcome</h2>
+                        <h2 className="text-xl font-semibold">
+                            Income and outcome graphs for finance applications
+                        </h2>
                     </header>
                     <article>
                         <IncomeAndExpense />
                     </article>
                 </section>
+
+                <section>
+                    <header className="p-2 text-xl font-semibold">
+                        <h2 className="text-xl font-semibold">Even Sankey graphs</h2>
+                    </header>
+                    <article>
+                        <SankeyGraph />
+                    </article>
+                </section>
             </section>
 
-            <section className="my-4">
-                <header className="">
+            <section>
+                <header>
                     <h2 className="text-2xl font-semibold">
-                        Give transparency to your users with responsive and dynamic graphs.
+                        Create custom reports and graphs tailored to your users.
                     </h2>
                 </header>
 
                 <article>
                     <p>
-                        I can integrate your API's to display a custom, interactive and
-                        dynamic graphs. Bank transactions, performance, any data that can be
-                        tracked we can display in a graph.
+                        I can integrate your APIs to display custom, interactive graphs for
+                        any data, from bank transactions to performance metrics.
                     </p>
                 </article>
             </section>

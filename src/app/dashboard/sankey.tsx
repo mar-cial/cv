@@ -1,4 +1,5 @@
-import { ResponsiveContainer, Sankey } from "recharts";
+"use client";
+import { ResponsiveContainer, Sankey, Tooltip } from "recharts";
 
 const data0 = {
     nodes: [
@@ -37,15 +38,23 @@ const data0 = {
         {
             source: 2,
             target: 4,
-            value: 291741,
+            value: 291711,
         },
     ],
 };
 
-export default function Sankeys() {
+export default function SankeyGraph() {
     return (
         <ResponsiveContainer width={"100%"} height={500}>
-            <Sankey></Sankey>
+            <Sankey
+                data={data0}
+                height={300}
+                nodePadding={100}
+                link={{ stroke: "#ea580c" }}
+                node={{}}
+            >
+                <Tooltip />
+            </Sankey>
         </ResponsiveContainer>
     );
 }

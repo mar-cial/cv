@@ -22,12 +22,10 @@ export default function RootLayout({
             >
                 <nav className="flex justify-between items-center py-4">
                     <Link href="/">Home</Link>
-                    <Link
-                        href="/dashboard"
-                        className="py-1 px-4 font-semibold text-white bg-emerald-600 rounded-md"
-                    >
-                        Example dashboard
-                    </Link>
+                    <div className="flex gap-2">
+                        <Link href="/dashboard">Example dashboard</Link>
+                        <Link href="/dashboard">API Integrations</Link>
+                    </div>
                 </nav>
                 {children}
                 <footer>

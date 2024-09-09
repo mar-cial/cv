@@ -27,12 +27,12 @@ export function IncomeAndExpense() {
                     paddingAngle={5}
                     label
                     labelLine={true}
+                    stroke={"0"}
                 >
-                    {incomeOutcomeData.map((entry, index) => {
+                    {incomeOutcomeData.map((_, index) => {
                         return <Cell key={`ie-pie-chart-${index}`} fill={colors[index]} />;
                     })}
                 </Pie>
-
                 <Tooltip />
                 <Legend />
             </PieChart>
