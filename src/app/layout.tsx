@@ -20,11 +20,11 @@ export default function RootLayout({
             <body
                 className={`${inter.className} p-4 container mx-auto max-w-screen-sm`}
             >
-                <nav className="flex justify-between items-center pb-4">
+                <nav className="flex justify-between items-center py-4">
                     <Link href="/">Home</Link>
                     <Link
                         href="/dashboard"
-                        className="py-1 px-4 bg-emerald-600 rounded-md"
+                        className="py-1 px-4 font-semibold text-white bg-emerald-600 rounded-md"
                     >
                         Example dashboard
                     </Link>

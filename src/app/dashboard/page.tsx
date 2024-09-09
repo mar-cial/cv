@@ -1,29 +1,47 @@
 import { UserDetails, UserDetailsLoader } from "@/components/user/details";
+import PageHeader from "@/components/user/page-header";
 import PerformanceContainer from "@/components/user/performance-container";
 import TransactionsContainer from "@/components/user/transactions-container";
 import { Suspense } from "react";
+import { Performance } from "./performance";
+import { IncomeAndExpense } from "./income-and-expense";
 
 export default function Page() {
     return (
         <main>
-            <header>
-                <h1 className="text-3xl font-semibold">Dashboard</h1>
-            </header>
+            <PageHeader title={"Dashboard"} />
 
             <section>
-                <p>I can create a fully customizable dashboard for your users.</p>
                 <p>
-                    Create an account with Google authentication to see what can be done.
-                </p>
-                <p className="text-orange-400">
-                    The following data is fabricated and doesn't mean anything.
+                    Hay un monton de escenarios en donde un entrepeneur desee darle
+                    oportunidad a las personas de crear un usuario.
                 </p>
             </section>
 
             <section>
-                <Suspense fallback={<UserDetailsLoader />}>
-                    <UserDetails />
-                </Suspense>
+                <section className="py-6">
+                    <section className="flex justify-center items-center p-2">
+                        <div className="p-4 bg-orange-600 rounded-full">
+                            <span className="font-mono text-4xl font-bold">b.</span>
+                        </div>
+                    </section>
+
+                    <section className="p-2 text-center">
+                        <section>
+                            <h3 className="text-xs uppercase">Username</h3>
+                            <p className="text-lg">Cesar</p>
+                        </section>
+                    </section>
+
+                    <section>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Laudantium officiis dolorem harum enim. Quibusdam rerum alias
+                            debitis. Non, saepe odit quod quidem accusamus error alias quae
+                            deleniti ducimus, sunt sequi.
+                        </p>
+                    </section>
+                </section>
 
                 <article>
                     <p>
@@ -36,34 +54,22 @@ export default function Page() {
             </section>
 
             <section className="flex flex-col gap-4">
-                <section className="p-2 rounded-md bg-zinc-800">
-                    <header className="p-2 text-xl font-semibold">Performance</header>
-
-                    <Suspense
-                        fallback={
-                            <section className="flex justify-center items-center h-[200px]">
-                                <div className="text-xl font-semibold">Loading</div>
-                            </section>
-                        }
-                    >
-                        <PerformanceContainer />
-                    </Suspense>
+                <section>
+                    <header className="p-2 text-xl font-semibold">
+                        <h2 className="text-xl font-semibold">Performance</h2>
+                    </header>
+                    <article>
+                        <Performance />
+                    </article>
                 </section>
 
-                <section className="p-2 rounded-md bg-zinc-800">
+                <section>
                     <header className="p-2 text-xl font-semibold">
-                        Income/expense pie chart
+                        <h2 className="text-xl font-semibold">Income and outcome</h2>
                     </header>
-
-                    <Suspense
-                        fallback={
-                            <section className="flex justify-center items-center h-[200px]">
-                                <div className="text-xl font-semibold">Loading</div>
-                            </section>
-                        }
-                    >
-                        <TransactionsContainer />
-                    </Suspense>
+                    <article>
+                        <IncomeAndExpense />
+                    </article>
                 </section>
             </section>
 

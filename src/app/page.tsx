@@ -1,134 +1,51 @@
+import PageHeader from "@/components/user/page-header";
+import Link from "next/link";
+
 export default function Page() {
     return (
         <main>
-            <header>
-                <h1 className="text-3xl font-semibold">
-                    Empowering Your Business with Cutting-Edge, Custom-Built Applications.
-                </h1>
-            </header>
-            <section>
-                <p>
-                    Hello! I'm Cesar, a software developer with 3 years of experience.
-                </p>
-                <p>
-                    I thrive on tackling challenges in the web space, with a focus on
-                    creating fast, informative, and user-friendly applications.
-                </p>
-            </section>
+            <PageHeader
+                title={
+                    "I can build your application. We will work together to land your idea."
+                }
+            />
 
             <section>
-                <h2 className="text-xl font-semibold">
-                    I understand the challenges entrepreneurs face daily.
-                </h2>
                 <p>
-                    My goal is to help your business thrive using the most advanced and
-                    reliable tools available.
+                    Hello. My name is Cesar, and I am a full stack developer. I have a
+                    couple years of experience deploying features to thousands of users.
                 </p>
+
                 <p>
-                    In a rapidly changing world, custom-built, high-quality solutions are
-                    what set your business apart from the rest.
+                    Tengo que escribir de esto maldita sea. Que es lo que quiero decir.
+                    Quiero decirle que tengo la habilidad para desarrollar lo que yo
+                    quiera. Que es lo que quiero pasar. Que es lo que quiero decir. Quiero
+                    que las personas confien en mi. Confien en mi habilidad para
+                    programar. Tengo que ensenar lo que he hecho, y lo que se puede hacer.
+                    Vamos a hacer secciones y tambien vamos a hacer componentes para
+                    ensenarlo.
                 </p>
             </section>
 
             <section>
                 <header>
-                    <h2 className="text-xl font-semibold">
-                        Realize your idea with these essential features:
-                    </h2>
+                    <h2 className="text-2xl font-bold">User dashboards</h2>
                 </header>
 
-                <section>
-                    <section>
-                        <header>
-                            <h3>User base management</h3>
-                        </header>
+                <article>
+                    <p>
+                        Tengo experiencia usando librerias externas para crear usuarios,
+                        almacenarlos y permitirles crear historial. Podemos usar estos datos
+                        para crear una experiencia personalizada al utilizar la aplicacion.
+                        Podemos crear graficas dinamicas de cualquier dato coleccionado.
+                    </p>
 
-                        <article>
-                            <ul className="list-disc list-inside">
-                                <li>Customizable user profiles</li>
-                                <li>Multiple authentication providers</li>
-                                <li>Track user activity</li>
-                            </ul>
-                        </article>
-                    </section>
-                </section>
-
-                <section>
-                    <header>
-                        <h3>Enhanced user loyalty &amp; rewards</h3>
-                    </header>
-                    <article>
-                        <ul className="list-disc list-inside">
-                            <li>Customizable user profiles</li>
-                            <li>Multiple authentication providers</li>
-                            <li>Track user activity</li>
-                        </ul>
-                    </article>
-                </section>
-
-                <section>
-                    <header>
-                        <h3>Custom notification systems</h3>
-                    </header>
-                    <article>
-                        <ul className="list-disc list-inside">
-                            <li>Instant updates with WebSockets</li>
-                            <li>Easy user engagement without annoying popups</li>
-                        </ul>
-                    </article>
-                </section>
-
-                <section>
-                    <header>
-                        <h3>User voting &amp; feedback</h3>
-                    </header>
-                    <article>
-                        <ul className="list-disc list-inside">
-                            <li>Capture user interactions easily</li>
-                            <li>Increase user engagement and build history</li>
-                        </ul>
-                    </article>
-                </section>
-
-                <section>
-                    <header>
-                        <h3>Event scheduling &amp; management</h3>
-                    </header>
-                    <article>
-                        <ul className="list-disc list-inside">
-                            <li>
-                                Let users manage and create appointments, events, meetings, etc.
-                            </li>
-                            <li>Easy and intuitive UI for easier conversions </li>
-                        </ul>
-                    </article>
-                </section>
-
-                <section>
-                    <header>
-                        <h3>Interactive user dashboards</h3>
-                    </header>
-                    <article>
-                        <ul className="list-disc list-inside">
-                            <li>Track any historic data you like</li>
-                            <li>Clear understanding of your business</li>
-                        </ul>
-                    </article>
-                </section>
-
-                <section>
-                    <header>
-                        <h3>API integrations</h3>
-                    </header>
-                    <article>
-                        <ul className="list-disc list-inside">
-                            <li>
-                                Goes without saying. I can integrate any API tool to reach your
-                                goals
-                            </li>
-                        </ul>
-                    </article>
-                </section>
+                    <div>
+                        <Link href="/dashboard" className="text-orange-600 hover:underline">
+                            Prepare un ejemplo de un user dashboard.
+                        </Link>
+                    </div>
+                </article>
             </section>
         </main>
     );

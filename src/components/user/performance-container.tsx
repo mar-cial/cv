@@ -15,10 +15,6 @@ export type SessionRedis = {
     redis: Redis;
 };
 
-export function incomeExpenses() {
-    return;
-}
-
 export async function getUserData({
     session,
     redis,
