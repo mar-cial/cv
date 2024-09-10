@@ -4,7 +4,7 @@ import {
 } from "@/components/game-information";
 import PageHeader from "@/components/user/page-header";
 import { Fixtures } from "@/models/fixtures";
-import { Predictions, PredictionsData } from "@/models/predictions";
+import { PredictionsData } from "@/models/predictions";
 import { apiCall } from "@/utils/api";
 import { Suspense } from "react";
 import { ComparisionChart } from "./radial-chart";
