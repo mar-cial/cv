@@ -1,32 +1,35 @@
 import PageHeader from "@/components/user/page-header";
 import Link from "next/link";
-import { signIn } from "./auth";
+import { auth, signIn, signOut } from "./auth";
+import { Suspense } from "react";
 
 export default function Page() {
     return (
         <main>
             <PageHeader
                 title={
-                    "I can build your application. We will work together to land your idea."
+                    "Let’s bring your ideas to life. Together, we’ll build the perfect application."
                 }
             />
 
             <section>
                 <header>
-                    <h2 className="text-2xl font-bold">User dashboards</h2>
+                    <h2 className="text-2xl font-bold">User Dashboards</h2>
                 </header>
 
                 <article>
                     <p>
-                        Tengo experiencia usando librerias externas para crear usuarios,
-                        almacenarlos y permitirles crear historial. Podemos usar estos datos
-                        para crear una experiencia personalizada al utilizar la aplicacion.
-                        Podemos crear graficas dinamicas de cualquier dato coleccionado.
+                        I specialize in building user-friendly dashboards that bring data to
+                        life. Whether it's creating user profiles, tracking activity, or
+                        providing personalized experiences, I can help you manage and
+                        visualize key metrics. Dynamic charts and data visualizations are at
+                        the core of creating an intuitive and engaging experience for your
+                        users.
                     </p>
 
                     <div>
                         <Link href="/dashboard" className="text-orange-600 hover:underline">
-                            Prepare un ejemplo de un user dashboard.
+                            Check out a live example of a custom user dashboard.
                         </Link>
                     </div>
                 </article>
@@ -39,43 +42,91 @@ export default function Page() {
 
                 <article>
                     <p>
-                        We can consume any expernal APIs and manipulate data to be consumed,
-                        used, stored and processed.
-                    </p>
-                    <p>
-                        We will work with your internal or external libraries to reach the
-                        objective.
+                        Seamless API integrations are key to unlocking the full potential of
+                        your application. I can connect your app to external or internal
+                        APIs, ensuring smooth data flow, processing, and storage. Let’s
+                        integrate the tools and services you rely on, effortlessly.
                     </p>
 
                     <p>
-                        <a href="/integrations" className="text-orange-600 hover:underline">
-                            We prepared an example{" "}
-                        </a>
-                        of API integrations for you.
+                        Whether it's real-time data, payment gateways, or third-party
+                        libraries, I’ll ensure everything works in harmony.
                     </p>
+
+                    <div>
+                        <Link
+                            href="/integrations"
+                            className="text-orange-600 hover:underline"
+                        >
+                            View an example of an API integration in action.
+                        </Link>
+                    </div>
                 </article>
             </section>
 
             <section>
                 <header>
                     <h2 className="text-2xl font-bold">
-                        User authentication and authorization
+                        User Authentication &amp; Authorization
                     </h2>
                 </header>
 
                 <article>
                     <p>
-                        We will make it easy for users to create an account. We will give
-                        the ability to sign up with their favorite provider, and avoid the
-                        headaches of user management.
+                        Secure and frictionless user authentication is vital. I implement
+                        robust solutions that allow users to sign up and log in with ease,
+                        using their preferred authentication provider (Google, Facebook,
+                        etc.). No more hassle of managing users—let’s keep it simple and
+                        secure.
                     </p>
-                    <p>
-                        We prepared an example so you can create an account for this web
-                        application. It doesn't do anything, but it let's you know how easy
-                        it is to create an account and store a session with OAuth.{" "}
-                    </p>
+                    <Suspense fallback={<div>Loading</div>}>
+                        <Login />
+                    </Suspense>
                 </article>
             </section>
         </main>
+    );
+}
+
+async function Login() {
+    const session = await auth();
+    if (!session) {
+        return (
+            <form
+                action={async () => {
+                    "use server";
+                    await signIn();
+                }}
+            >
+                <button type="submit" className="text-emerald-500">
+                    Create account
+                </button>
+            </form>
+        );
+    }
+
+    return (
+        <div>
+            <div>You are already signed in!</div>
+            <div>
+                Your session will be stored and will refresh each time you come back.
+                Less friction for the user.
+            </div>
+            <div className="flex ju">
+                You can use the button below to sign out. We won't keep any of your
+                information or do anything with it. Just want to illustrate how easy it
+                can be.
+            </div>
+            <form
+                action={async () => {
+                    "use server";
+                    await signOut();
+                }}
+            >
+                <button type="submit" className="text-blue-500">
+                    Sign out.
+                </button>
+            </form>
+        </div>
     );
 }
