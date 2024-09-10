@@ -24,7 +24,7 @@ export default function RootLayout({
                     <Link href="/">Home</Link>
                     <div className="flex gap-2">
                         <Link href="/dashboard">Example dashboard</Link>
-                        <Link href="/dashboard">API Integrations</Link>
+                        <Link href="/integrations">API Integrations</Link>
                     </div>
                 </nav>
                 {children}
