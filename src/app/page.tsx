@@ -1,5 +1,6 @@
 import PageHeader from "@/components/user/page-header";
 import Link from "next/link";
+import { signIn } from "./auth";
 
 export default function Page() {
     return (
@@ -61,6 +62,19 @@ export default function Page() {
                         User authentication and authorization
                     </h2>
                 </header>
+
+                <article>
+                    <p>
+                        We will make it easy for users to create an account. We will give
+                        the ability to sign up with their favorite provider, and avoid the
+                        headaches of user management.
+                    </p>
+                    <p>
+                        We prepared an example so you can create an account for this web
+                        application. It doesn't do anything, but it let's you know how easy
+                        it is to create an account and store a session with OAuth.{" "}
+                    </p>
+                </article>
             </section>
         </main>
     );
