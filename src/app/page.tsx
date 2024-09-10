@@ -11,23 +11,6 @@ export default function Page() {
             />
 
             <section>
-                <p>
-                    Hello. My name is Cesar, and I am a full stack developer. I have a
-                    couple years of experience deploying features to thousands of users.
-                </p>
-
-                <p>
-                    Tengo que escribir de esto maldita sea. Que es lo que quiero decir.
-                    Quiero decirle que tengo la habilidad para desarrollar lo que yo
-                    quiera. Que es lo que quiero pasar. Que es lo que quiero decir. Quiero
-                    que las personas confien en mi. Confien en mi habilidad para
-                    programar. Tengo que ensenar lo que he hecho, y lo que se puede hacer.
-                    Vamos a hacer secciones y tambien vamos a hacer componentes para
-                    ensenarlo.
-                </p>
-            </section>
-
-            <section>
                 <header>
                     <h2 className="text-2xl font-bold">User dashboards</h2>
                 </header>
@@ -54,9 +37,21 @@ export default function Page() {
                 </header>
 
                 <article>
-                    <header>
-                        <h3>ASDF</h3>
-                    </header>
+                    <p>
+                        We can consume any expernal APIs and manipulate data to be consumed,
+                        used, stored and processed.
+                    </p>
+                    <p>
+                        We will work with your internal or external libraries to reach the
+                        objective.
+                    </p>
+
+                    <p>
+                        <a href="/integrations" className="text-orange-600 hover:underline">
+                            We prepared an example{" "}
+                        </a>
+                        of API integrations for you.
+                    </p>
                 </article>
             </section>
 

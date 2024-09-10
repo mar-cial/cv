@@ -29,25 +29,7 @@ export default function Page() {
                             <p className="text-lg">Cesar</p>
                         </section>
                     </section>
-
-                    <section>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Laudantium officiis dolorem harum enim. Quibusdam rerum alias
-                            debitis. Non, saepe odit quod quidem accusamus error alias quae
-                            deleniti ducimus, sunt sequi.
-                        </p>
-                    </section>
                 </section>
-
-                <article>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
-                        soluta praesentium eius amet quos dolores, asperiores itaque est,
-                        fugit dignissimos veniam facere quasi fuga obcaecati dolor, ea magni
-                        perferendis omnis?
-                    </p>
-                </article>
             </section>
 
             <section className="flex flex-col gap-4">

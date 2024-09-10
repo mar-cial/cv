@@ -1,13 +1,8 @@
-import {
-    GameInformation,
-    GameInformationLoader,
-} from "@/components/game-information";
 import PageHeader from "@/components/user/page-header";
-import { Fixtures } from "@/models/fixtures";
-import { PredictionsData } from "@/models/predictions";
-import { apiCall } from "@/utils/api";
 import { Suspense } from "react";
-import { ComparisionChart } from "./radial-chart";
+import { GameTeamsComparison, GameTeamsComparisonLoader } from "./comparison";
+import { GamePredictions, GamePredictionsLoader } from "./predictions";
+import { GameInformation, GameInformationLoader } from "./information";
 
 export default function Page() {
     return (
@@ -20,14 +15,20 @@ export default function Page() {
                 </header>
 
                 <article>
-                    <p></p>
+                    <p>
+                        We prepared an example of what we can build based on an API. We are
+                        using{" "}
+                        <a
+                            href="https://api-sports.io/"
+                            className="text-orange-600 underline"
+                        >
+                            API-Sports
+                        </a>{" "}
+                        for this. It shows an analysis of the next game to happen in the
+                        "Major League Soccer" (MLS) league. All data presented is pulled
+                        directly from the API.
+                    </p>
                 </article>
-            </section>
-
-            <section>
-                <header>
-                    <h2>Check out what can be done:</h2>
-                </header>
             </section>
 
             <section>
@@ -35,14 +36,40 @@ export default function Page() {
                     <h3 className="text-2xl font-semibold">Sports API Dashboard</h3>
                 </header>
 
-                <section className="grid gap-2 py-8 md:grid-cols-2">
-                    <section className="p-4 rounded-md bg-zinc-800">
+                <section className="grid gap-2 md:grid-cols-2">
+                    <section className="rounded-md">
+                        <header>
+                            <h2 className="text-2xl font-semibold">Match details</h2>
+                        </header>
                         <Suspense fallback={<GameInformationLoader />}>
                             <GameInformation />
                         </Suspense>
                     </section>
 
-                    <section className="p-4 rounded-md bg-zinc-800">
+                    <section className="rounded-md">
+                        <header>
+                            <h2 className="text-2xl font-semibold">Teams comparison</h2>
+                        </header>
+
+                        <Suspense fallback={<GameTeamsComparisonLoader />}>
+                            <GameTeamsComparison />
+                        </Suspense>
+                    </section>
+
+                    <section className="rounded-md">
+                        <header>
+                            <h2 className="text-2xl font-semibold">
+                                Predictions (provided by{" "}
+                                <a
+                                    href="https://api-sports.io/"
+                                    className="text-orange-600 hover:underline"
+                                >
+                                    API Sports
+                                </a>
+                                )
+                            </h2>
+                        </header>
+
                         <Suspense fallback={<GamePredictionsLoader />}>
                             <GamePredictions />
                         </Suspense>
@@ -50,59 +77,5 @@ export default function Page() {
                 </section>
             </section>
         </main>
-    );
-}
-
-function GamePredictionsLoader() {
-    return <section>Loader</section>;
-}
-
-async function GamePredictions() {
-    const fixtures_endpoint = "/fixtures";
-
-    const fixtures_response = await apiCall({
-        endpoint: fixtures_endpoint,
-        params: { league: "253", next: "1", timezone: "America/Los_Angeles" },
-    });
-
-    if (!fixtures_response.ok) {
-        return <section>err</section>;
-    }
-
-    const fixtures: Fixtures = await fixtures_response.json();
-    if (!fixtures) {
-        return <section>error</section>;
-    }
-
-    const fixture_id = fixtures.response[0].fixture.id;
-    if (!fixture_id) {
-        return <section>error</section>;
-    }
-
-    const predictions_endpoint = "/predictions";
-
-    const predictions_response = await apiCall({
-        endpoint: predictions_endpoint,
-        params: { fixture: fixture_id },
-    });
-
-    if (!predictions_response.ok) {
-        return <section>error</section>;
-    }
-
-    const predictions_data: PredictionsData = await predictions_response.json();
-    if (!predictions_data) {
-        return <section>error</section>;
-    }
-
-    const { predictions, league, teams, comparison, h2h } =
-        predictions_data.response[0];
-
-    return (
-        <ComparisionChart
-            comparison={comparison}
-            home={teams.home.name}
-            away={teams.away.name}
-        />
     );
 }

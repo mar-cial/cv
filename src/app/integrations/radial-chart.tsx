@@ -29,7 +29,7 @@ export function ComparisionChart({
     return (
         <ResponsiveContainer width={"100%"} height={300}>
             <RadarChart data={data} outerRadius={100}>
-                <PolarGrid opacity={0.2} />
+                <PolarGrid opacity={0.5} />
                 <PolarAngleAxis dataKey="name" />
                 <PolarRadiusAxis angle={10} />
                 <Radar

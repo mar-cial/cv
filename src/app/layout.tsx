@@ -20,12 +20,16 @@ export default function RootLayout({
             <body
                 className={`${inter.className} p-4 container mx-auto max-w-screen-sm`}
             >
-                <nav className="flex justify-between items-center py-4">
-                    <Link href="/">Home</Link>
-                    <div className="flex gap-2">
-                        <Link href="/dashboard">Example dashboard</Link>
-                        <Link href="/integrations">API Integrations</Link>
-                    </div>
+                <nav className="flex flex-col">
+                    <Link href="/" className="hover:underline">
+                        Home
+                    </Link>
+                    <Link href="/dashboard" className="hover:underline">
+                        Example dashboard
+                    </Link>
+                    <Link href="/integrations" className="hover:underline">
+                        API Integrations
+                    </Link>
                 </nav>
                 {children}
                 <footer>
