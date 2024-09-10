@@ -17,16 +17,16 @@ export default function Page() {
                 <article>
                     <p>
                         We prepared an example of what we can build based on an API. We are
-                        using{" "}
+                        using
                         <a
                             href="https://api-sports.io/"
                             className="text-orange-600 underline"
                         >
                             API-Sports
-                        </a>{" "}
+                        </a>
                         for this. It shows an analysis of the next game to happen in the
-                        "Major League Soccer" (MLS) league. All data presented is pulled
-                        directly from the API.
+                        &quot;Major League Soccer&quot; (MLS) league. All data presented is
+                        pulled directly from the API.
                     </p>
                 </article>
             </section>
@@ -59,7 +59,7 @@ export default function Page() {
                     <section className="rounded-md">
                         <header>
                             <h2 className="text-2xl font-semibold">
-                                Predictions (provided by{" "}
+                                Predictions (provided by
                                 <a
                                     href="https://api-sports.io/"
                                     className="text-orange-600 hover:underline"
