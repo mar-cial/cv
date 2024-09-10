@@ -20,8 +20,8 @@ export default function Page() {
                 <article>
                     <p>
                         I specialize in building user-friendly dashboards that bring data to
-                        life. Whether it's creating user profiles, tracking activity, or
-                        providing personalized experiences, I can help you manage and
+                        life. Whether it&apos;s creating user profiles, tracking activity,
+                        or providing personalized experiences, I can help you manage and
                         visualize key metrics. Dynamic charts and data visualizations are at
                         the core of creating an intuitive and engaging experience for your
                         users.
@@ -44,13 +44,13 @@ export default function Page() {
                     <p>
                         Seamless API integrations are key to unlocking the full potential of
                         your application. I can connect your app to external or internal
-                        APIs, ensuring smooth data flow, processing, and storage. Let’s
+                        APIs, ensuring smooth data flow, processing, and storage. Let&apos;s
                         integrate the tools and services you rely on, effortlessly.
                     </p>
 
                     <p>
-                        Whether it's real-time data, payment gateways, or third-party
-                        libraries, I’ll ensure everything works in harmony.
+                        Whether it&apos;s real-time data, payment gateways, or third-party
+                        libraries, I&apos;ll ensure everything works in harmony.
                     </p>
 
                     <div>
@@ -76,8 +76,8 @@ export default function Page() {
                         Secure and frictionless user authentication is vital. I implement
                         robust solutions that allow users to sign up and log in with ease,
                         using their preferred authentication provider (Google, Facebook,
-                        etc.). No more hassle of managing users—let’s keep it simple and
-                        secure.
+                        etc.). No more hassle of managing users—let&apos;s keep it simple
+                        and secure.
                     </p>
                     <Suspense fallback={<div>Loading</div>}>
                         <Login />
@@ -113,7 +113,7 @@ async function Login() {
                 Less friction for the user.
             </div>
             <div className="flex ju">
-                You can use the button below to sign out. We won't keep any of your
+                You can use the button below to sign out. We won&apos;t keep any of your
                 information or do anything with it. Just want to illustrate how easy it
                 can be.
             </div>

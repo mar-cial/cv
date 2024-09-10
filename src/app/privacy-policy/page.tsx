@@ -25,8 +25,8 @@ export default function Page() {
             </ul>
             <p>
                 We do <strong>not</strong> collect or access your password, sensitive
-                information, or any other data beyond the necessary scope of Google’s
-                OAuth process.
+                information, or any other data beyond the necessary scope of
+                Google’apos;s OAuth process.
             </p>
 
             <h2 className="text-lg font-semibold">3. How We Use Your Information</h2>
@@ -63,8 +63,9 @@ export default function Page() {
             <p>
                 We use Google OAuth for account creation and login functionality. When
                 you choose to log in using Google OAuth, you will be directed to
-                Google’s authentication services. We recommend reviewing Google's
-                Privacy Policy for more details on how they handle your information:
+                Google’apos;s authentication services. We recommend reviewing
+                Google'apos;s Privacy Policy for more details on how they handle your
+                information:
                 <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
             </p>
 
@@ -108,7 +109,7 @@ export default function Page() {
                 Once your data is no longer needed, it will be securely deleted.
             </p>
 
-            <h2 className="text-lg font-semibold">9. Children’s Privacy</h2>
+            <h2 className="text-lg font-semibold">9. Children’apos;s Privacy</h2>
             <p>
                 Our services are not intended for children under the age of 13, and we
                 do not knowingly collect personal information from children. If you are

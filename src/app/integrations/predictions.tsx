@@ -7,17 +7,26 @@ function Form({ form }: { form: string }) {
     return form
         .slice(-5)
         .split("")
-        .map((char) =>
+        .map((char, index) =>
             char === "W" ? (
-                <div className="flex justify-center items-center w-6 bg-emerald-500 rounded-md">
+                <div
+                    key={index}
+                    className="flex justify-center items-center w-6 bg-emerald-500 rounded-md"
+                >
                     {char}
                 </div>
             ) : char === "L" ? (
-                <div className="flex justify-center items-center w-6 bg-red-500 rounded-md">
+                <div
+                    key={index}
+                    className="flex justify-center items-center w-6 bg-red-500 rounded-md"
+                >
                     <div>{char}</div>
                 </div>
             ) : (
-                <div className="flex justify-center items-center w-6 rounded-md bg-zinc-500">
+                <div
+                    key={index}
+                    className="flex justify-center items-center w-6 rounded-md bg-zinc-500"
+                >
                     {char}
                 </div>
             ),
