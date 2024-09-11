@@ -1,90 +1,152 @@
-import PageHeader from "@/components/user/page-header";
 import Link from "next/link";
 import { auth, signIn, signOut } from "./auth";
 import { Suspense } from "react";
+import { Hero } from "@/components/hero";
 
-export default function Page() {
+function Value() {
     return (
-        <main>
-            <PageHeader
-                title={
-                    "Let’s bring your ideas to life. Together, we’ll build the perfect application."
-                }
-            />
+        <section className="p-12">
+            <header className="text-center">
+                <h2 className="text-7xl font-semibold">How we deliver value</h2>
+            </header>
 
-            <section>
-                <header>
-                    <h2 className="text-2xl font-bold">User Dashboards</h2>
-                </header>
-
-                <article>
-                    <p>
-                        I specialize in building user-friendly dashboards that bring data to
-                        life. Whether it&apos;s creating user profiles, tracking activity,
-                        or providing personalized experiences, I can help you manage and
-                        visualize key metrics. Dynamic charts and data visualizations are at
-                        the core of creating an intuitive and engaging experience for your
-                        users.
-                    </p>
-
-                    <div>
-                        <Link href="/dashboard" className="text-orange-600 hover:underline">
-                            Check out a live example of a custom user dashboard.
-                        </Link>
+            <section className="grid gap-12 p-12 xl:grid-cols-3">
+                <article className="flex flex-col gap-6">
+                    <header className="text-center">
+                        <h3 className="text-4xl">
+                            Custom Software Tailored to Your Business Needs
+                        </h3>
+                    </header>
+                    <div className="text-center">
+                        <p>
+                            Every solution we build is designed to fit your unique goals,
+                            ensuring the software we create works seamlessly with your
+                            operations and scales with your growth.
+                        </p>
+                    </div>
+                </article>
+                <article className="flex flex-col gap-6">
+                    <header className="text-center">
+                        <h3 className="text-4xl">
+                            End-to-End Development with Full Transparency
+                        </h3>
+                    </header>
+                    <div className="text-center">
+                        <p>
+                            From initial concept to final deployment, we manage the entire
+                            development process, providing regular updates and working closely
+                            with you to keep everything aligned and on track.
+                        </p>
+                    </div>
+                </article>
+                <article className="flex flex-col gap-6">
+                    <header className="text-center">
+                        <h3 className="text-4xl">
+                            Reliable Support and Continuous Optimization
+                        </h3>
+                    </header>
+                    <div className="text-center">
+                        <p>
+                            Beyond launch, we provide ongoing support, maintenance, and
+                            feature enhancements to ensure your software stays ahead of
+                            evolving business demands.
+                        </p>
                     </div>
                 </article>
             </section>
+        </section>
+    );
+}
 
-            <section>
-                <header>
-                    <h2 className="text-2xl font-bold">API Integrations</h2>
-                </header>
+function Clients() {
+    return (
+        <section className="flex flex-col gap-6 p-12 min-h-screen">
+            <section className="grid flex-1 xl:grid-cols-2">
+                <section className="border">
+                    <section>
+                        <header className="">
+                            <h2 className="text-7xl font-semibold">
+                                Hear what our satisfied clients have to say
+                            </h2>
+                        </header>
+                    </section>
+                </section>
 
-                <article>
-                    <p>
-                        Seamless API integrations are key to unlocking the full potential of
-                        your application. I can connect your app to external or internal
-                        APIs, ensuring smooth data flow, processing, and storage. Let&apos;s
-                        integrate the tools and services you rely on, effortlessly.
-                    </p>
+                <section className="flex flex-col gap-4">
+                    <section className="border">
+                        <article className="flex flex-col p-10">
+                            <div>
+                                <div>5 stars</div>
+                            </div>
+                            <div>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque
+                                recusandae nemo totam aperiam laboriosam voluptatibus harum
+                                iure. Dolores eligendi ipsam, quo aspernatur laborum, rem qui
+                                est assumenda voluptatum quaerat voluptatem?
+                            </div>
 
-                    <p>
-                        Whether it&apos;s real-time data, payment gateways, or third-party
-                        libraries, I&apos;ll ensure everything works in harmony.
-                    </p>
+                            <header className="flex gap-3 border">
+                                <div>
+                                    <div className="w-12 h-12 bg-zinc-400"></div>
+                                </div>
+                                <div>
+                                    <h4 className="text-lg">Jesus Chavez</h4>
+                                    <p className="text-sm">CABRA Sports</p>
+                                </div>
+                            </header>
+                        </article>
+                        <article className="flex flex-col p-4">
+                            <div>
+                                <div>5 stars</div>
+                            </div>
+                            <div>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure,
+                                maxime. Autem, nesciunt quibusdam ullam non perspiciatis atque
+                                ex expedita vero quaerat, animi ab eligendi? Illo ad quaerat
+                                ullam explicabo molestiae.
+                            </div>
 
-                    <div>
-                        <Link
-                            href="/integrations"
-                            className="text-orange-600 hover:underline"
-                        >
-                            View an example of an API integration in action.
-                        </Link>
-                    </div>
-                </article>
+                            <header className="flex gap-3 border">
+                                <div>
+                                    <div className="w-12 h-12 bg-zinc-400"></div>
+                                </div>
+                                <div>
+                                    <h4 className="text-lg">Jesus Chavez</h4>
+                                    <p className="text-sm">CABRA Sports</p>
+                                </div>
+                            </header>
+                        </article>
+                        <article className="flex flex-col p-4">
+                            <div>
+                                <div>5 stars</div>
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                                quaerat culpa, doloribus molestiae ducimus ullam sequi expedita
+                                dicta laboriosam eius eum iusto, qui rerum nemo, ex quas dolor
+                                tempora corporis.
+                            </div>
+
+                            <header className="flex gap-3 border">
+                                <div>
+                                    <div className="w-12 h-12 bg-zinc-400"></div>
+                                </div>
+                                <div>
+                                    <h4 className="text-lg">Jesus Chavez</h4>
+                                    <p className="text-sm">CABRA Sports</p>
+                                </div>
+                            </header>
+                        </article>
+                    </section>
+                </section>
             </section>
-
-            <section>
-                <header>
-                    <h2 className="text-2xl font-bold">
-                        User Authentication &amp; Authorization
-                    </h2>
-                </header>
-
-                <article>
-                    <p>
-                        Secure and frictionless user authentication is vital. I implement
-                        robust solutions that allow users to sign up and log in with ease,
-                        using their preferred authentication provider (Google, Facebook,
-                        etc.). No more hassle of managing users—let&apos;s keep it simple
-                        and secure.
-                    </p>
-                    <Suspense fallback={<div>Loading</div>}>
-                        <Login />
-                    </Suspense>
-                </article>
+            <section className="flex col-span-2 justify-between items-center p-6 text-white bg-orange-600 rounded-md">
+                <div className="text-4xl">
+                    Ready to become another succesful testimony?
+                </div>
+                <div>Contact now</div>
             </section>
-        </main>
+        </section>
     );
 }
 
@@ -128,5 +190,22 @@ async function Login() {
                 </button>
             </form>
         </div>
+    );
+}
+
+function Examples() {
+    return <section>examples</section>;
+}
+export default function Page() {
+    return (
+        <main>
+            <Hero />
+
+            <Value />
+
+            <Clients />
+
+            <Examples />
+        </main>
     );
 }

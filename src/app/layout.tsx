@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,30 +17,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body
-                className={`${inter.className} p-4 container mx-auto max-w-screen-sm`}
-            >
-                <nav className="flex flex-col">
-                    <Link href="/" className="hover:underline">
-                        Home
-                    </Link>
-                    <Link href="/dashboard" className="hover:underline">
-                        Example dashboard
-                    </Link>
-                    <Link href="/integrations" className="hover:underline">
-                        API Integrations
-                    </Link>
-                </nav>
+            <body className={`${inter.className} `}>
                 {children}
-                <footer>
-                    <div className="flex gap-2">
-                        <div>Contact me through:</div>
-                        <a href="mailto:cesar@marcialdev.com" className="underline">
-                            email
-                        </a>
-                    </div>
-                    <Link href="/privacy-policy">Privacy Policy</Link>
-                </footer>
+                <Footer />
             </body>
         </html>
     );
