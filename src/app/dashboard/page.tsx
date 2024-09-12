@@ -7,6 +7,16 @@ import { TotalSales } from "../integrations/total-sales";
 
 export default function Page() {
     return (
+        <main>
+            <header>
+                <h1>live up</h1>
+            </header>
+        </main>
+    );
+}
+
+function PageV1() {
+    return (
         <main className="p-8 xl:p-12">
             <PageHeader title={"Dashboard"} />
 
