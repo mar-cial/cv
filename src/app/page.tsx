@@ -1,19 +1,17 @@
-import Link from "next/link";
 import { auth, signIn, signOut } from "./auth";
-import { Suspense } from "react";
 import { Hero } from "@/components/hero";
 
 function Value() {
     return (
-        <section className="p-12">
+        <section className="p-8 xl:p-12">
             <header className="text-center">
-                <h2 className="text-7xl font-semibold">How we deliver value</h2>
+                <h2 className="text-4xl font-semibold">How we deliver value</h2>
             </header>
 
             <section className="grid gap-12 p-12 xl:grid-cols-3">
                 <article className="flex flex-col gap-6">
                     <header className="text-center">
-                        <h3 className="text-4xl">
+                        <h3 className="text-2xl xl:text-4xl">
                             Custom Software Tailored to Your Business Needs
                         </h3>
                     </header>
@@ -27,7 +25,7 @@ function Value() {
                 </article>
                 <article className="flex flex-col gap-6">
                     <header className="text-center">
-                        <h3 className="text-4xl">
+                        <h3 className="text-2xl xl:text-4xl">
                             End-to-End Development with Full Transparency
                         </h3>
                     </header>
@@ -41,7 +39,7 @@ function Value() {
                 </article>
                 <article className="flex flex-col gap-6">
                     <header className="text-center">
-                        <h3 className="text-4xl">
+                        <h3 className="text-2xl xl:text-4xl">
                             Reliable Support and Continuous Optimization
                         </h3>
                     </header>
@@ -60,12 +58,12 @@ function Value() {
 
 function Clients() {
     return (
-        <section className="flex flex-col gap-6 p-12 min-h-screen">
+        <section className="flex flex-col gap-6 p-8 xl:p-12 min-h-dvh">
             <section className="grid flex-1 xl:grid-cols-2">
-                <section className="border">
+                <section>
                     <section>
-                        <header className="">
-                            <h2 className="text-7xl font-semibold">
+                        <header className="text-center xl:text-left">
+                            <h2 className="text-4xl font-semibold xl:text-7xl">
                                 Hear what our satisfied clients have to say
                             </h2>
                         </header>
@@ -73,7 +71,7 @@ function Clients() {
                 </section>
 
                 <section className="flex flex-col gap-4">
-                    <section className="border">
+                    <section className="">
                         <article className="flex flex-col p-10">
                             <div>
                                 <div>5 stars</div>
@@ -85,7 +83,7 @@ function Clients() {
                                 est assumenda voluptatum quaerat voluptatem?
                             </div>
 
-                            <header className="flex gap-3 border">
+                            <header className="flex gap-3">
                                 <div>
                                     <div className="w-12 h-12 bg-zinc-400"></div>
                                 </div>
@@ -106,7 +104,7 @@ function Clients() {
                                 ullam explicabo molestiae.
                             </div>
 
-                            <header className="flex gap-3 border">
+                            <header className="flex gap-3">
                                 <div>
                                     <div className="w-12 h-12 bg-zinc-400"></div>
                                 </div>
@@ -127,7 +125,7 @@ function Clients() {
                                 tempora corporis.
                             </div>
 
-                            <header className="flex gap-3 border">
+                            <header className="flex gap-3">
                                 <div>
                                     <div className="w-12 h-12 bg-zinc-400"></div>
                                 </div>
@@ -141,7 +139,7 @@ function Clients() {
                 </section>
             </section>
             <section className="flex col-span-2 justify-between items-center p-6 text-white bg-orange-600 rounded-md">
-                <div className="text-4xl">
+                <div className="text-xl">
                     Ready to become another succesful testimony?
                 </div>
                 <div>Contact now</div>
@@ -193,9 +191,6 @@ async function Login() {
     );
 }
 
-function Examples() {
-    return <section>examples</section>;
-}
 export default function Page() {
     return (
         <main>
@@ -204,8 +199,6 @@ export default function Page() {
             <Value />
 
             <Clients />
-
-            <Examples />
         </main>
     );
 }

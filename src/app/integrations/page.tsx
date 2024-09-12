@@ -6,7 +6,7 @@ import { GameInformation, GameInformationLoader } from "./information";
 
 export default function Page() {
     return (
-        <main>
+        <main className="p-8 xl:p-12">
             <PageHeader title="API Integrations" />
 
             <section>

@@ -2,38 +2,33 @@ import PageHeader from "@/components/user/page-header";
 import { Performance } from "./performance";
 import { IncomeAndExpense } from "./income-and-expense";
 import SankeyGraph from "./sankey";
+import { Suspense } from "react";
+import { TotalSales } from "../integrations/total-sales";
 
 export default function Page() {
     return (
-        <main>
+        <main className="p-8 xl:p-12">
             <PageHeader title={"Dashboard"} />
 
             <section>
-                <p>
-                    Hay un monton de escenarios en donde un entrepeneur desee darle
-                    oportunidad a las personas de crear un usuario.
-                </p>
-            </section>
-
-            <section>
-                <section className="py-6">
-                    <section className="flex justify-center items-center p-2">
-                        <div className="p-4 bg-orange-600 rounded-full">
-                            <span className="font-mono text-4xl font-bold">b.</span>
-                        </div>
-                    </section>
-
-                    <section className="p-2 text-center">
-                        <section>
-                            <h3 className="text-xs uppercase">Username</h3>
-                            <p className="text-lg">Cesar</p>
-                        </section>
-                    </section>
+                <section>
+                    <div>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic culpa
+                        incidunt exercitationem quos earum labore dolor quae magni vitae
+                        neque, fuga voluptate pariatur distinctio explicabo, perferendis
+                        dolorum reprehenderit voluptatibus ipsum?
+                    </div>
                 </section>
             </section>
 
-            <section className="flex flex-col gap-4">
-                <section>
+            <section>
+                <header className="py-4">
+                    <h2 className="text-2xl font-semibold">All your data at a glance.</h2>
+                </header>
+            </section>
+
+            <section className="grid gap-4 lg:grid-cols-3">
+                <section className="flex flex-col gap-4 p-2 rounded-md border">
                     <header className="p-2 text-xl font-semibold">
                         <h2 className="text-xl font-semibold">
                             Performance graphs for health, analytics, generic tracking of any
@@ -41,27 +36,33 @@ export default function Page() {
                         </h2>
                     </header>
                     <article>
-                        <Performance />
+                        <Suspense fallback={<div>Loading</div>}>
+                            <Performance />
+                        </Suspense>
                     </article>
                 </section>
 
-                <section>
+                <section className="p-2 rounded-md border">
                     <header className="p-2 text-xl font-semibold">
                         <h2 className="text-xl font-semibold">
                             Income and outcome graphs for finance applications
                         </h2>
                     </header>
                     <article>
-                        <IncomeAndExpense />
+                        <Suspense fallback={<div>Loading</div>}>
+                            <IncomeAndExpense />
+                        </Suspense>
                     </article>
                 </section>
 
-                <section>
+                <section className="p-2 rounded-md border">
                     <header className="p-2 text-xl font-semibold">
                         <h2 className="text-xl font-semibold">Even Sankey graphs</h2>
                     </header>
                     <article>
-                        <SankeyGraph />
+                        <Suspense fallback={<div>Loading</div>}>
+                            <SankeyGraph />
+                        </Suspense>
                     </article>
                 </section>
             </section>
