@@ -194,11 +194,17 @@ async function Login() {
 export default function Page() {
     return (
         <main>
-            <Hero />
+            <section>
+                <header>
+                    <h1 className="text-2xl">Allies</h1>
+                </header>
+            </section>
 
-            <Value />
-
-            <Clients />
+            <section>
+                <header>
+                    <h2>Gregory</h2>
+                </header>
+            </section>
         </main>
     );
 }
