@@ -1,5 +1,4 @@
 import { auth, signIn, signOut } from "./auth";
-import { Hero } from "@/components/hero";
 
 function Value() {
     return (
