@@ -1,4 +1,4 @@
-type PerformanceData = {
+export type PerformanceData = {
     name: string;
     sold: number;
     expected: number;

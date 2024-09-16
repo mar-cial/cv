@@ -10,7 +10,7 @@ import {
 } from "recharts";
 
 export function IncomeAndExpense() {
-    const colors = ["#ea580c", "#343131"];
+    const colors = ["#5ea985", "#3e7edd"];
 
     return (
         <ResponsiveContainer width={"100%"} height={300}>
@@ -23,7 +23,7 @@ export function IncomeAndExpense() {
                     cy="50%"
                     innerRadius={70}
                     outerRadius={100}
-                    fill={"#343131"}
+                    fill={"#3e7edd"}
                     paddingAngle={5}
                     label={(l) => {
                         return `$${parseFloat(l.value).toFixed(2)}`;

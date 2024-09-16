@@ -3,14 +3,55 @@ import { Performance } from "./performance";
 import { IncomeAndExpense } from "./income-and-expense";
 import SankeyGraph from "./sankey";
 import { Suspense } from "react";
-import { TotalSales } from "../integrations/total-sales";
+import { HistoricChart } from "./historic";
+import { historicData } from "@/data/historic";
+import { ScatterCharting } from "./scatter";
+import { scatterData } from "@/data/scatter";
+import { performanceData } from "@/data/performance";
 
 export default function Page() {
     return (
         <main>
-            <header>
-                <h1>live up</h1>
-            </header>
+            <PageHeader title="Custom dashboards" />
+
+            <section>
+                <p>
+                    We can build any dashboard you need. We will analyze, extract and use
+                    data to share information with clear, intuitive and responsive graphs.
+                </p>
+            </section>
+
+            <section className="py-8">
+                <Suspense fallback={<div>Loading</div>}>
+                    <HistoricChart data={historicData} />
+                </Suspense>
+            </section>
+
+            <section>
+                <Suspense fallback={<div>Loading</div>}>
+                    <Performance data={performanceData} />
+                </Suspense>
+            </section>
+
+            <section>
+                <Suspense fallback={<div>Loading</div>}>
+                    <ScatterCharting data={scatterData} />
+                </Suspense>
+            </section>
+
+            <section className="grid gap-4 lg:grid-cols-2">
+                <article className="bg-zinc-800">
+                    <Suspense fallback={<div>Loading</div>}>
+                        <IncomeAndExpense />
+                    </Suspense>
+                </article>
+
+                <article className="bg-zinc-800">
+                    <Suspense fallback={<div>Loading</div>}>
+                        <SankeyGraph />
+                    </Suspense>
+                </article>
+            </section>
         </main>
     );
 }

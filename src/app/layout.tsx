@@ -6,8 +6,8 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Cesar Marcial - Web Developer",
-    description: "Cesar Marcial is a web developer with 3 years of experience.",
+    title: "bandr - software development agency",
+    description: "we build quality MVP products for startups",
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.className}`}>
+            <body className={`${inter.className} p-8 xl:p-12`}>
                 <nav>
                     <div>
                         <Link href="/">bandr.</Link>
