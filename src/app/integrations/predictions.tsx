@@ -174,7 +174,7 @@ export async function GamePredictions() {
     const { predictions, teams } = predictions_data.response[0];
 
     return (
-        <section className="flex flex-col divide-y">
+        <section className="flex flex-col divide-y divide-zinc-700">
             <div className="py-2">
                 <div className="grid grid-cols-2">
                     <div className="flex flex-col gap-2 justify-center items-center">
@@ -237,10 +237,11 @@ export async function GamePredictions() {
                     </div>
                 </div>
             </div>
-            <div>
+
+            <div className="py-2">
                 <div className="flex justify-between">
-                    <div>Probable winner</div>
-                    <div>Probable outcome</div>
+                    <div className="font-semibold">Probable winner</div>
+                    <div className="font-semibold">Probable outcome</div>
                 </div>
                 <div className="flex justify-between">
                     <div className="text-center">
@@ -252,32 +253,33 @@ export async function GamePredictions() {
                 </div>
             </div>
 
-            <div>
-                <div className="text-center">Advice</div>
-                <div className="flex justify-between">
-                    <div className="text-center">
-                        <p>{predictions.advice}</p>
-                    </div>
+            <div className="py-2">
+                <div className="font-semibold text-center">Advice</div>
+                <div className="text-center">
+                    <p>{predictions.advice}</p>
                 </div>
             </div>
 
-            <div>
-                <div className="text-center">Probable outcome</div>
-                <div className="flex justify-between">
+            <div className="py-2">
+                <div className="font-semibold text-center">Probable outcome</div>
+
+                <div className="grid grid-cols-3 divide-x divide-zinc-700">
                     <div className="text-center">
-                        <div>Home win</div>
+                        <div className="font-medium">Home win</div>
                         <div>
                             <p>{predictions.percent.home}</p>
                         </div>
                     </div>
+
                     <div className="text-center">
-                        <div>Draw</div>
+                        <div className="font-medium">Draw</div>
                         <div>
                             <p>{predictions.percent.draw}</p>
                         </div>
                     </div>
+
                     <div className="text-center">
-                        <div>Away win</div>
+                        <div className="font-medium">Away win</div>
                         <div>
                             <p>{predictions.percent.away}</p>
                         </div>
@@ -285,10 +287,10 @@ export async function GamePredictions() {
                 </div>
             </div>
 
-            <div>
+            <div className="py-2">
                 <div className="flex justify-between">
-                    <div>Under/over?</div>
-                    <div>Win or draw?</div>
+                    <div className="font-semibold">Under/over?</div>
+                    <div className="font-semibold">Win or draw?</div>
                 </div>
                 <div className="flex justify-between">
                     <div className="text-center">
