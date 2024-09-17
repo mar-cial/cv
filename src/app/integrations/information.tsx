@@ -2,7 +2,7 @@ import { Fixtures } from "@/models/fixtures";
 import { apiCall } from "@/utils/api";
 import Image from "next/image";
 
-export function GameInformationLoader() {
+export function MatchDetailsLoader() {
     return (
         <section>
             <section className="pb-4">
@@ -51,7 +51,7 @@ export function GameInformationLoader() {
     );
 }
 
-export async function GameInformation() {
+export async function MatchDetails() {
     const endpoint = "/fixtures";
     const response = await apiCall({
         endpoint,

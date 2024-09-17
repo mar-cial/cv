@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "bandr - software development agency",
-    description: "we build quality MVP products for startups",
+    description: "We build quality MVP products for startups",
 };
 
 export default function RootLayout({
@@ -18,11 +18,18 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${inter.className} p-8 xl:p-12`}>
-                <nav>
+                <nav className="flex justify-between items-center">
                     <div>
                         <Link href="/">bandr.</Link>
                     </div>
-                    <div></div>
+                    <div>
+                        <Link
+                            href="mailto:cesarmarcialq@gmail.com"
+                            className="text-orange-600"
+                        >
+                            Contact me
+                        </Link>
+                    </div>
                 </nav>
                 {children}
             </body>

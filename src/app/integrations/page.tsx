@@ -1,7 +1,17 @@
 import { Suspense } from "react";
-import { GameTeamsComparison, GameTeamsComparisonLoader } from "./comparison";
+import {
+    GameTeamsComparison,
+    GameTeamsComparisonLoader,
+    TeamsComparison,
+    TeamsComparisonLoader,
+} from "./comparison";
 import { GamePredictions, GamePredictionsLoader } from "./predictions";
-import { GameInformation, GameInformationLoader } from "./information";
+import {
+    GameInformation,
+    GameInformationLoader,
+    MatchDetails,
+    MatchDetailsLoader,
+} from "./information";
 import PageHeader from "@/components/page-header";
 
 export default function Page() {
@@ -30,9 +40,9 @@ export default function Page() {
                         <header className="py-4">
                             <h2 className="text-2xl font-semibold">Match details</h2>
                         </header>
-                        <section className="rounded-md lg:p-4 dark:bg-zinc-950">
-                            <Suspense fallback={<GameInformationLoader />}>
-                                <GameInformation />
+                        <section className="p-2 rounded-md border border-zinc-700">
+                            <Suspense fallback={<MatchDetailsLoader />}>
+                                <MatchDetails />
                             </Suspense>
                         </section>
                     </section>
@@ -42,28 +52,25 @@ export default function Page() {
                             <h2 className="text-2xl font-semibold">Teams comparison</h2>
                         </header>
 
-                        <section className="rounded-md border lg:p-4 dark:bg-zinc-950">
-                            <Suspense fallback={<GameTeamsComparisonLoader />}>
-                                <GameTeamsComparison />
+                        <section className="p-2 rounded-md border border-zinc-700">
+                            <Suspense fallback={<TeamsComparisonLoader />}>
+                                <TeamsComparison />
                             </Suspense>
                         </section>
                     </section>
 
                     <section className="rounded-md">
-                        <header className="py-4">
-                            <h2 className="text-2xl font-semibold">
-                                Predictions (provided by
-                                <a
-                                    href="https://api-sports.io/"
-                                    className="text-orange-600 hover:underline"
-                                >
-                                    API Sports
-                                </a>
-                                )
-                            </h2>
+                        <header className="flex gap-2 py-4 text-2xl font-semibold">
+                            <h2 className="">Predictions provided by:</h2>
+                            <a
+                                href="https://api-sports.io/"
+                                className="text-orange-600 hover:underline"
+                            >
+                                API Sports
+                            </a>
                         </header>
 
-                        <section className="p-2 rounded-md border">
+                        <section className="p-2 rounded-md border border-zinc-700">
                             <Suspense fallback={<GamePredictionsLoader />}>
                                 <GamePredictions />
                             </Suspense>

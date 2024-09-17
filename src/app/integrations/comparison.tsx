@@ -3,11 +3,11 @@ import { PredictionsData } from "@/models/predictions";
 import { apiCall } from "@/utils/api";
 import { ComparisionChart } from "./radial-chart";
 
-export function GameTeamsComparisonLoader() {
+export function TeamsComparisonLoader() {
     return <section>Loader</section>;
 }
 
-export async function GameTeamsComparison() {
+export async function TeamsComparison() {
     const fixtures_endpoint = "/fixtures";
 
     const fixtures_response = await apiCall({
