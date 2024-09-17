@@ -14,9 +14,9 @@ export default function Page() {
                     <p>
                         I have extensive experience working with a wide variety of API
                         integrations, allowing me to seamlessly connect your applications
-                        with external services and data sources. Whether it's integrating
-                        third-party APIs, building custom APIs, or working with REST,
-                        GraphQL, or WebSocket protocols, I ensure smooth data flow and
+                        with external services and data sources. Whether it&apos;s
+                        integrating third-party APIs, building custom APIs, or working with
+                        REST, GraphQL, or WebSocket protocols, I ensure smooth data flow and
                         communication between systems. I focus on optimizing API
                         performance, ensuring security, and handling complex data
                         structures, so your applications can function efficiently and
@@ -25,9 +25,9 @@ export default function Page() {
                     </p>
 
                     <p>
-                        I've prepared a quick example of components similar to those I've
-                        developed in the past. The requests are secure and fast, with
-                        responses efficiently cached for quicker retrieval, ensuring a
+                        I&apos;ve prepared a quick example of components similar to those
+                        I&apos;ve developed in the past. The requests are secure and fast,
+                        with responses efficiently cached for quicker retrieval, ensuring a
                         seamless user experience.
                     </p>
 

@@ -8,10 +8,10 @@ export default function Page() {
 
             <section className="pb-8">
                 <p>
-                    Hi, I'm Cesar Marcial, a full-stack software developer with a passion
-                    for building scalable solutions. From creating internal tools with Go
-                    to launching MVPs for startups that have attracted VC funding, I
-                    specialize in turning ideas into impactful, real-world applications.
+                    Hi, I&apos;m Cesar Marcial, a full-stack software developer with a
+                    passion for building scalable solutions. From creating internal tools
+                    with Go to launching MVPs for startups that have attracted VC funding,
+                    I specialize in turning ideas into impactful, real-world applications.
                 </p>
             </section>
 
@@ -30,8 +30,8 @@ export default function Page() {
                     <article>
                         <p>
                             Provide your users with a seamless experience by presenting
-                            complex data clearly and efficiently. Whether it's building user
-                            databases or creating intuitive dashboards, I ensure all key
+                            complex data clearly and efficiently. Whether it&apos;s building
+                            user databases or creating intuitive dashboards, I ensure all key
                             information is accessible at a glance.
                         </p>
                     </article>
@@ -70,10 +70,10 @@ export default function Page() {
 
                     <article>
                         <p className="italic">
-                            "Working with Cesar was a great experience. He handled both the
-                            front-end and back-end development efficiently, always keeping me
-                            updated and delivering quality work. I'm really happy with the
-                            result and would definitely work with them again."
+                            &quot;Working with Cesar was a great experience. He handled both
+                            the front-end and back-end development efficiently, always keeping
+                            me updated and delivering quality work. I&apos;m really happy with
+                            the result and would definitely work with them again.&quot;
                         </p>
                         <p>- Jesus Chavez, Cabra Sports Co-Founder</p>
                     </article>
@@ -121,10 +121,10 @@ export default function Page() {
 
                     <article>
                         <p className="italic">
-                            "I was really impressed with Cesar's development skills. He was
-                            easy to communicate with, met every deadline, and resolved issues
-                            quickly and effectively. The project went smoothly, and I'm very
-                            happy with the results."
+                            &quot;I was really impressed with Cesar&apos;s development skills.
+                            He was easy to communicate with, met every deadline, and resolved
+                            issues quickly and effectively. The project went smoothly, and
+                            I&apos;m very happy with the results.&quot;
                         </p>
                         <p>- Mary Hernandez, Suma Wealth Co-Founder</p>
                     </article>
