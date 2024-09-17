@@ -74,7 +74,7 @@ export async function MatchDetails() {
 
     return (
         <section className="flex flex-col gap-2">
-            <section className="p-2 rounded-md border dark:border-zinc-700">
+            <section className="p-2 border-b dark:border-zinc-700">
                 <section className="flex gap-2 items-center">
                     <Image
                         width={200}
@@ -97,7 +97,7 @@ export async function MatchDetails() {
                 </header>
             </section>
 
-            <section className="p-2 rounded-md border dark:border-zinc-700">
+            <section className="p-2">
                 <section className="divide-y divide-zinc-600">
                     <div className="flex justify-between py-1">
                         <div>Match date</div>

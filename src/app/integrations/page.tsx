@@ -1,17 +1,7 @@
 import { Suspense } from "react";
-import {
-    GameTeamsComparison,
-    GameTeamsComparisonLoader,
-    TeamsComparison,
-    TeamsComparisonLoader,
-} from "./comparison";
+import { TeamsComparison, TeamsComparisonLoader } from "./comparison";
 import { GamePredictions, GamePredictionsLoader } from "./predictions";
-import {
-    GameInformation,
-    GameInformationLoader,
-    MatchDetails,
-    MatchDetailsLoader,
-} from "./information";
+import { MatchDetails, MatchDetailsLoader } from "./information";
 import PageHeader from "@/components/page-header";
 
 export default function Page() {
@@ -20,22 +10,40 @@ export default function Page() {
             <PageHeader title="API Integrations" />
 
             <section>
-                <article>
+                <article className="flex flex-col gap-2">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-                        voluptatibus autem nulla eaque cumque voluptatem laborum atque
-                        adipisci! Cum autem ut mollitia aut. Accusamus aut necessitatibus,
-                        autem recusandae tenetur iusto?
+                        I have extensive experience working with a wide variety of API
+                        integrations, allowing me to seamlessly connect your applications
+                        with external services and data sources. Whether it's integrating
+                        third-party APIs, building custom APIs, or working with REST,
+                        GraphQL, or WebSocket protocols, I ensure smooth data flow and
+                        communication between systems. I focus on optimizing API
+                        performance, ensuring security, and handling complex data
+                        structures, so your applications can function efficiently and
+                        reliably. Whatever your integration needs, I’m confident we can
+                        implement a solution that fits your project goals.
+                    </p>
+
+                    <p>
+                        I've prepared a quick example of components similar to those I've
+                        developed in the past. The requests are secure and fast, with
+                        responses efficiently cached for quicker retrieval, ensuring a
+                        seamless user experience.
+                    </p>
+
+                    <p>
+                        For instance, if you want to retrieve all the details about the next
+                        Major League Soccer match:
                     </p>
                 </article>
             </section>
 
             <section className="py-8">
                 <header>
-                    <h3 className="text-2xl font-semibold">Sports API Dashboard</h3>
+                    <h3 className="text-3xl font-semibold">Sports API Dashboard</h3>
                 </header>
 
-                <section className="grid gap-2 md:grid-cols-2">
+                <section className="grid gap-2">
                     <section className="rounded-md">
                         <header className="py-4">
                             <h2 className="text-2xl font-semibold">Match details</h2>

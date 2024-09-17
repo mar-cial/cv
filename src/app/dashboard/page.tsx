@@ -14,10 +14,13 @@ export default function Page() {
         <main>
             <PageHeader title="Custom dashboards" />
 
-            <section>
+            <section className="flex flex-col gap-2">
                 <p>
-                    We can build any dashboard you need. We will analyze, extract and use
-                    data to share information with clear, intuitive and responsive graphs.
+                    I’ve prepared a few sample graphs that I’ve created for clients. While
+                    the design and implementation of graphs are straightforward, the real
+                    challenge lies in identifying the right data to extract and present.
+                    Together, we can tackle this challenge, ensuring you have a clear,
+                    insightful view of all your important information.
                 </p>
             </section>
 
