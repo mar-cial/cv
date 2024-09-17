@@ -48,7 +48,7 @@ export async function GameTeamsComparison() {
     const { teams, comparison } = predictions_data.response[0];
 
     return (
-        <section className="border border-black">
+        <section>
             <ComparisionChart
                 comparison={comparison}
                 home={teams.home.name}

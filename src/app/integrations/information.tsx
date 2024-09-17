@@ -73,33 +73,37 @@ export async function GameInformation() {
         fixture.date.slice(0, fixture.date.toString().indexOf("T")) || "-";
 
     return (
-        <section className="border border-black">
-            <section className="pb-4">
+        <section className="flex flex-col gap-2">
+            <section className="p-2 rounded-md border dark:border-zinc-700">
                 <section className="flex gap-2 items-center">
                     <Image
                         width={200}
                         height={200}
                         src={teams.home.logo}
                         alt="Home team logo"
-                        className="w-14"
+                        className="w-16"
                     />
                     <Image
                         width={200}
                         height={200}
                         src={teams.away.logo}
                         alt="Away team logo"
-                        className="w-14"
+                        className="w-16"
                     />
                 </section>
 
                 <header>
                     <h3 className="text-2xl font-semibold">{`${teams.home.name} vs. ${teams.away.name}`}</h3>
-                    <p>Match date: {f_date}</p>
                 </header>
             </section>
 
-            <section>
+            <section className="p-2 rounded-md border dark:border-zinc-700">
                 <section className="divide-y divide-zinc-600">
+                    <div className="flex justify-between py-1">
+                        <div>Match date</div>
+                        <div className="text-right">{f_date}</div>
+                    </div>
+
                     <div className="flex justify-between py-1">
                         <div>Match status</div>
                         <div className="text-right">{fixture.status.long}</div>

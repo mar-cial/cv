@@ -6,58 +6,51 @@ import { GameInformation, GameInformationLoader } from "./information";
 
 export default function Page() {
     return (
-        <main className="p-8 xl:p-12">
+        <main>
             <PageHeader title="API Integrations" />
 
             <section>
-                <header>
-                    <h2>We can work with any API you use for your business.</h2>
-                </header>
-
                 <article>
                     <p>
-                        We prepared an example of what we can build based on an API. We are
-                        using
-                        <a
-                            href="https://api-sports.io/"
-                            className="text-orange-600 underline"
-                        >
-                            API-Sports
-                        </a>
-                        for this. It shows an analysis of the next game to happen in the
-                        &quot;Major League Soccer&quot; (MLS) league. All data presented is
-                        pulled directly from the API.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+                        voluptatibus autem nulla eaque cumque voluptatem laborum atque
+                        adipisci! Cum autem ut mollitia aut. Accusamus aut necessitatibus,
+                        autem recusandae tenetur iusto?
                     </p>
                 </article>
             </section>
 
-            <section>
+            <section className="py-8">
                 <header>
                     <h3 className="text-2xl font-semibold">Sports API Dashboard</h3>
                 </header>
 
                 <section className="grid gap-2 md:grid-cols-2">
                     <section className="rounded-md">
-                        <header>
+                        <header className="py-4">
                             <h2 className="text-2xl font-semibold">Match details</h2>
                         </header>
-                        <Suspense fallback={<GameInformationLoader />}>
-                            <GameInformation />
-                        </Suspense>
+                        <section className="rounded-md lg:p-4 dark:bg-zinc-950">
+                            <Suspense fallback={<GameInformationLoader />}>
+                                <GameInformation />
+                            </Suspense>
+                        </section>
                     </section>
 
                     <section className="rounded-md">
-                        <header>
+                        <header className="py-4">
                             <h2 className="text-2xl font-semibold">Teams comparison</h2>
                         </header>
 
-                        <Suspense fallback={<GameTeamsComparisonLoader />}>
-                            <GameTeamsComparison />
-                        </Suspense>
+                        <section className="rounded-md border lg:p-4 dark:bg-zinc-950">
+                            <Suspense fallback={<GameTeamsComparisonLoader />}>
+                                <GameTeamsComparison />
+                            </Suspense>
+                        </section>
                     </section>
 
                     <section className="rounded-md">
-                        <header>
+                        <header className="py-4">
                             <h2 className="text-2xl font-semibold">
                                 Predictions (provided by
                                 <a
@@ -70,9 +63,11 @@ export default function Page() {
                             </h2>
                         </header>
 
-                        <Suspense fallback={<GamePredictionsLoader />}>
-                            <GamePredictions />
-                        </Suspense>
+                        <section className="p-2 rounded-md border">
+                            <Suspense fallback={<GamePredictionsLoader />}>
+                                <GamePredictions />
+                            </Suspense>
+                        </section>
                     </section>
                 </section>
             </section>

@@ -11,21 +11,21 @@ function Form({ form }: { form: string }) {
             char === "W" ? (
                 <div
                     key={index}
-                    className="flex justify-center items-center w-6 bg-emerald-500 rounded-md"
+                    className="flex justify-center items-center w-6 text-sm bg-emerald-500 rounded-md"
                 >
                     {char}
                 </div>
             ) : char === "L" ? (
                 <div
                     key={index}
-                    className="flex justify-center items-center w-6 bg-red-500 rounded-md"
+                    className="flex justify-center items-center w-6 text-sm bg-red-500 rounded-md"
                 >
                     <div>{char}</div>
                 </div>
             ) : (
                 <div
                     key={index}
-                    className="flex justify-center items-center w-6 rounded-md bg-zinc-500"
+                    className="flex justify-center items-center w-6 text-sm rounded-md bg-zinc-500"
                 >
                     {char}
                 </div>
@@ -56,7 +56,7 @@ export function GamePredictionsLoader() {
                 </div>
             </div>
 
-            <div>
+            <div className="py-2 bg-red-200">
                 <div className="text-center">Goals</div>
                 <div className="flex justify-between">
                     <div className="text-center">
@@ -174,41 +174,43 @@ export async function GamePredictions() {
     const { predictions, teams } = predictions_data.response[0];
 
     return (
-        <section className="p-2 border border-black">
-            <div>
+        <section className="flex flex-col divide-y">
+            <div className="py-2">
                 <div className="grid grid-cols-2">
-                    <div className="flex flex-col justify-center items-center">
+                    <div className="flex flex-col gap-2 justify-center items-center">
                         <div>
                             <Image
                                 src={teams.home.logo}
                                 alt="home team logo"
                                 width={200}
                                 height={200}
-                                className="w-12 h-auto"
+                                className="w-16 h-auto"
                             />
                         </div>
 
-                        <div>{teams.home.name}</div>
+                        <div className="font-bold text-center">{teams.home.name}</div>
                     </div>
 
-                    <div className="flex flex-col justify-center items-center">
+                    <div className="flex flex-col gap-2 justify-center items-center">
                         <div>
                             <Image
                                 src={teams.away.logo}
                                 alt="away team logo"
                                 width={200}
                                 height={200}
-                                className="w-12 h-auto"
+                                className="w-16 h-auto"
                             />
                         </div>
 
-                        <div>{teams.away.name}</div>
+                        <div className="font-bold text-center">{teams.away.name}</div>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <div className="text-center">Form - last 5 games</div>
+            <div className="flex flex-col gap-2 py-2">
+                <div className="text-xl font-medium text-center">
+                    Form - last 5 games
+                </div>
 
                 <div className="grid grid-cols-2">
                     <div className="flex justify-center">
@@ -224,14 +226,14 @@ export async function GamePredictions() {
                 </div>
             </div>
 
-            <div>
-                <div className="text-center">Goals</div>
-                <div className="flex justify-between">
+            <div className="py-2">
+                <div className="text-xl font-medium text-center">Goals</div>
+                <div className="grid grid-cols-2">
                     <div className="text-center">
-                        <p>{predictions.goals.home}</p>
+                        <p className="text-xl font-semibold">{predictions.goals.home}</p>
                     </div>
                     <div className="text-center">
-                        <p>{predictions.goals.away}</p>
+                        <p className="text-xl font-semibold">{predictions.goals.away}</p>
                     </div>
                 </div>
             </div>
