@@ -1,4 +1,3 @@
-import PageHeader from "@/components/user/page-header";
 import { Performance } from "./performance";
 import { IncomeAndExpense } from "./income-and-expense";
 import SankeyGraph from "./sankey";
@@ -8,6 +7,7 @@ import { historicData } from "@/data/historic";
 import { ScatterCharting } from "./scatter";
 import { scatterData } from "@/data/scatter";
 import { performanceData } from "@/data/performance";
+import PageHeader from "@/components/page-header";
 
 export default function Page() {
     return (

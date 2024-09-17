@@ -1,8 +1,8 @@
-import PageHeader from "@/components/user/page-header";
 import { Suspense } from "react";
 import { GameTeamsComparison, GameTeamsComparisonLoader } from "./comparison";
 import { GamePredictions, GamePredictionsLoader } from "./predictions";
 import { GameInformation, GameInformationLoader } from "./information";
+import PageHeader from "@/components/page-header";
 
 export default function Page() {
     return (
