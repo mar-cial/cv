@@ -33,44 +33,21 @@ export default function Page() {
                 </div>
             </section>
 
-            <section className="flex flex-col gap-8 h-screen">
+            <section className="flex flex-col gap-8 p-12 min-h-screen">
                 <header>
-                    <h2 className="text-3xl">My strenghts</h2>
+                    <h2 className="font-mono">Services</h2>
                 </header>
-                <section>
-                    <header className="flex justify-between items-center">
-                        <h3 className="text-2xl">User dashboards</h3>
-                        <Link href="/dashboard" className="text-blue-500">
-                            See an example
-                        </Link>
-                    </header>
 
-                    <article>
-                        <p>
-                            Provide your users with a seamless experience by presenting
-                            complex data clearly and efficiently. Whether it&apos;s building
-                            user databases or creating intuitive dashboards, I ensure all key
-                            information is accessible at a glance.
-                        </p>
-                    </article>
-                </section>
+                <article>
+                    <p className="text-zinc-300">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
+                        obcaecati sit laborum quos ut doloribus similique, hic saepe nam
+                        quisquam, enim explicabo pariatur soluta dolore quasi aperiam
+                        reprehenderit vel ipsum.
+                    </p>
+                </article>
 
-                <section>
-                    <header className="flex justify-between items-center">
-                        <h3 className="text-2xl">API integrations</h3>
-                        <Link href="/integrations" className="text-blue-500">
-                            See an example
-                        </Link>
-                    </header>
-
-                    <article>
-                        <p>
-                            I specialize in integrating with any external API to bring your
-                            ideas to life. No matter the service or platform, I will make sure
-                            your project connects smoothly with the data and tools you need.
-                        </p>
-                    </article>
-                </section>
+                <section></section>
             </section>
 
             <section className="flex flex-col gap-8 pt-8 h-screen">

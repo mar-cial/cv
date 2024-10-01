@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 export function CurrentDate() {
-    const [currentTime, setCurrentTime] = useState(new Date());
+    const [currentTime, setCurrentTime] = useState<Date | null>(null);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -15,11 +15,13 @@ export function CurrentDate() {
         };
     }, []);
 
-    const slicedString = currentTime.toLocaleString().slice(-11);
+    const slicedString = currentTime?.toLocaleString().slice(-11);
 
     return (
         <div>
-            <span className="font-mono">Pacific Time - {slicedString}</span>
+            <span className="font-mono">
+                Pacific Time - {slicedString || "Loading"}
+            </span>
         </div>
     );
 }
