@@ -1,5 +1,5 @@
 import { CurrentDate } from "@/components/current-date";
-import Link from "next/link";
+import { FeatureCard } from "@/components/feature-card";
 
 export default function Page() {
     return (
@@ -33,24 +33,47 @@ export default function Page() {
                 </div>
             </section>
 
-            <section className="flex flex-col gap-8 p-12 min-h-screen">
+            <section className="flex flex-col gap-8 p-12">
                 <header>
                     <h2 className="font-mono">Services</h2>
                 </header>
 
                 <article>
                     <p className="text-zinc-300">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
-                        obcaecati sit laborum quos ut doloribus similique, hic saepe nam
-                        quisquam, enim explicabo pariatur soluta dolore quasi aperiam
-                        reprehenderit vel ipsum.
+                        At our agency, we focus on delivering solutions that make a real
+                        impact. Whether it’s designing intuitive interfaces, building
+                        powerful websites, or deploying cloud-based systems, we tailor each
+                        project to your unique needs. We work closely with you every step of
+                        the way to ensure the final product not only meets but exceeds your
+                        expectations. Whatever your goals, we’re here to help bring them to
+                        life.
                     </p>
                 </article>
-
-                <section></section>
+                <section className="flex flex-col divide-y divide-zinc-500">
+                    <FeatureCard
+                        title="UI/UX Design"
+                        content="We create user-friendly designs that not only look good but also make it easy for your customers to navigate. Our goal is to enhance the overall user experience, ensuring that every interaction is smooth and enjoyable."
+                    />
+                    <FeatureCard
+                        title="Client Collaboration Strategy"
+                        content="We believe that open communication leads to successful projects. Our collaboration strategy includes regular check-ins, feedback loops, and clear documentation, so we’re always on the same page with our clients."
+                    />
+                    <FeatureCard
+                        title="Web Development"
+                        content="From sleek landing pages to complex web applications, we handle all aspects of web development. Our team uses the latest technologies to build responsive and fast websites that meet your business needs."
+                    />
+                    <FeatureCard
+                        title="API Development and Integrations"
+                        content="We specialize in creating custom APIs that allow different software systems to communicate effectively. Whether you need a new API or want to integrate existing services, we’ve got you covered."
+                    />
+                    <FeatureCard
+                        title="Cloud Solutions and Deployment"
+                        content="Take advantage of the cloud with our deployment services. We help you move your applications to the cloud, ensuring scalability and security while making it easier to manage your infrastructure."
+                    />
+                </section>
             </section>
 
-            <section className="flex flex-col gap-8 pt-8 h-screen">
+            <section className="flex flex-col gap-8 pt-8 min-h-screen">
                 <header>
                     <h2 className="text-3xl">My satisfied clients</h2>
                 </header>
@@ -139,6 +162,15 @@ export default function Page() {
                         </ul>
                     </section>
                 </section>
+            </section>
+
+            <section className="p-12">
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+                    dignissimos tempora temporibus! Quos, numquam vel? Aliquid
+                    perspiciatis, asperiores facere iusto, eligendi aperiam consequatur
+                    accusantium beatae magni fugit unde cupiditate temporibus.
+                </p>
             </section>
         </main>
     );
