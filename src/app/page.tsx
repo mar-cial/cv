@@ -1,18 +1,36 @@
-import PageHeader from "@/components/page-header";
+import { CurrentDate } from "@/components/current-date";
 import Link from "next/link";
 
 export default function Page() {
     return (
         <main>
-            <PageHeader title={"I build custom software solutions for every need."} />
+            <section className="flex flex-col justify-between p-12 h-screen">
+                <header>
+                    <h1 className="text-8xl">bandr.</h1>
+                    <p className="text-lg text-zinc-400">build and run.</p>
+                </header>
 
-            <section className="pb-8 h-screen">
-                <p>
-                    Hi, I&apos;m Cesar Marcial, a full-stack software developer with a
-                    passion for building scalable solutions. From creating internal tools
-                    with Go to launching MVPs for startups that have attracted VC funding,
-                    I specialize in turning ideas into impactful, real-world applications.
-                </p>
+                <article>
+                    <p className="text-2xl">
+                        Premier digital product and venture studio specializing in
+                        innovative solutions for the next generation.
+                    </p>
+                </article>
+
+                <div>
+                    <a
+                        href="mailto:cesarmarcialq@gmail.com"
+                        className="py-2 px-8 text-xl font-bold bg-orange-600 rounded-md"
+                    >
+                        Contact us
+                    </a>
+                </div>
+
+                <div>
+                    <div>
+                        <CurrentDate />
+                    </div>
+                </div>
             </section>
 
             <section className="flex flex-col gap-8 h-screen">

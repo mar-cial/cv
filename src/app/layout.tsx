@@ -17,21 +17,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body
-                className={`${inter.className} p-8 container mx-auto max-w-screen-sm`}
-            >
-                <nav className="flex justify-between items-center">
-                    <div>
-                        <Link href="/">Home</Link>
-                    </div>
-                    <div>
-                        <a href="mailto:buildandrun@proton.me" className="text-orange-600">
-                            Contact me
-                        </a>
-                    </div>
-                </nav>
-                {children}
-            </body>
+            <body className={`${inter.className} `}>{children}</body>
         </html>
     );
 }
