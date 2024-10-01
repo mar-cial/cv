@@ -1,4 +1,5 @@
 export type HistoricData = {
     name: string;
-    value: number;
+    a: number;
+    b: number;
 };

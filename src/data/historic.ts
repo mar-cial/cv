@@ -3,50 +3,62 @@ import { HistoricData } from "@/models/historic";
 export const historicData: HistoricData[] = [
     {
         name: "Jan",
-        value: 1000,
+        a: 450,
+        b: 800,
     },
     {
         name: "Feb",
-        value: 1200,
+        a: 700,
+        b: 850,
     },
     {
         name: "Mar",
-        value: 1500,
+        a: 600,
+        b: 950,
     },
     {
         name: "Apr",
-        value: 1300,
+        a: 800,
+        b: 700,
     },
     {
         name: "May",
-        value: 1700,
+        a: 900,
+        b: 1200,
     },
     {
         name: "Jun",
-        value: 1600,
+        a: 650,
+        b: 1100,
     },
     {
         name: "Jul",
-        value: 1800,
+        a: 1050,
+        b: 1300,
     },
     {
         name: "Aug",
-        value: 1000,
+        a: 800,
+        b: 900,
     },
     {
         name: "Sep",
-        value: 2000,
+        a: 1200,
+        b: 1400,
     },
     {
         name: "Oct",
-        value: 2200,
+        a: 950,
+        b: 1250,
     },
     {
         name: "Nov",
-        value: 2100,
+        a: 1100,
+        b: 1000,
     },
     {
         name: "Dec",
-        value: 2300,
+        a: 1300,
+        b: 1500,
     },
 ];

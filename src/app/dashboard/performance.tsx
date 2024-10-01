@@ -1,5 +1,6 @@
 "use client";
 
+import { BLUE, GREEN } from "@/data/colors";
 import { PerformanceData } from "@/data/performance";
 import {
     Bar,
@@ -23,8 +24,8 @@ export function Performance({ data }: { data: PerformanceData[] }) {
                 <Legend
                     formatter={(l: string) => `${l.charAt(0).toUpperCase() + l.slice(1)}`}
                 />
-                <Bar dataKey="expected" fill="#343131" />
-                <Bar dataKey="sold" fill="#3e7edd" />
+                <Bar dataKey="expected" fill={GREEN} />
+                <Bar dataKey="sold" fill={BLUE} />
             </BarChart>
         </ResponsiveContainer>
     );

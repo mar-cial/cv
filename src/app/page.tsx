@@ -6,7 +6,7 @@ export default function Page() {
         <main>
             <PageHeader title={"I build custom software solutions for every need."} />
 
-            <section className="pb-8">
+            <section className="pb-8 h-screen">
                 <p>
                     Hi, I&apos;m Cesar Marcial, a full-stack software developer with a
                     passion for building scalable solutions. From creating internal tools
@@ -15,7 +15,7 @@ export default function Page() {
                 </p>
             </section>
 
-            <section className="flex flex-col gap-8">
+            <section className="flex flex-col gap-8 h-screen">
                 <header>
                     <h2 className="text-3xl">My strenghts</h2>
                 </header>
@@ -37,7 +37,7 @@ export default function Page() {
                     </article>
                 </section>
 
-                <section className="">
+                <section>
                     <header className="flex justify-between items-center">
                         <h3 className="text-2xl">API integrations</h3>
                         <Link href="/integrations" className="text-blue-500">
@@ -55,7 +55,7 @@ export default function Page() {
                 </section>
             </section>
 
-            <section className="flex flex-col gap-8 pt-8">
+            <section className="flex flex-col gap-8 pt-8 h-screen">
                 <header>
                     <h2 className="text-3xl">My satisfied clients</h2>
                 </header>

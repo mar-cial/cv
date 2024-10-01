@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "bandr - software development",
-    description: "We build quality MVP products for startups",
+    description: "We build quality products and MVP's for startups",
 };
 
 export default function RootLayout({

@@ -1,5 +1,6 @@
 "use client";
 
+import { BLUE, GREEN } from "@/data/colors";
 import { HistoricData } from "@/models/historic";
 import {
     LineChart,
@@ -18,12 +19,8 @@ export function HistoricChart({ data }: { data: HistoricData[] }) {
                 <CartesianGrid strokeDasharray="4 4" opacity={0.3} />
                 <XAxis dataKey={"name"} opacity={0.5} />
                 <YAxis opacity={0.5} />
-                <Line
-                    type="monotone"
-                    stroke="#3e7edd"
-                    dataKey="value"
-                    strokeWidth={6}
-                />
+                <Line type="monotone" stroke={BLUE} dataKey="a" strokeWidth={6} />
+                <Line type="monotone" stroke={GREEN} dataKey="b" strokeWidth={6} />
                 <Tooltip />
             </LineChart>
         </ResponsiveContainer>
