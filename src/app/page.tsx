@@ -1,6 +1,100 @@
 import { CurrentDate } from "@/components/current-date";
 import { FeatureCard } from "@/components/feature-card";
 
+function ClientsSection() {
+    return (
+        <section className="flex flex-col gap-8 pt-8 min-h-screen">
+            <header>
+                <h2 className="text-3xl">My satisfied clients</h2>
+            </header>
+
+            <section className="flex flex-col gap-2">
+                <header className="">
+                    <h3 className="text-lg">Cabra Sports</h3>
+                    <a href="cabragaming.com" className="underline hover:text-blue-500">
+                        visit web
+                    </a>
+                </header>
+
+                <article>
+                    <p className="italic">
+                        &quot;Working with Cesar was a great experience. He handled both the
+                        front-end and back-end development efficiently, always keeping me
+                        updated and delivering quality work. I&apos;m really happy with the
+                        result and would definitely work with them again.&quot;
+                    </p>
+                    <p>- Jesus Chavez, Cabra Sports Co-Founder</p>
+                </article>
+
+                <section>
+                    <header>
+                        <h4 className="text-lg">Contributions:</h4>
+                    </header>
+
+                    <ul className="py-2 list-disc list-inside">
+                        <li>
+                            Led the end-to-end planning, development, and maintenance of the
+                            application
+                        </li>
+                        <li>
+                            Increased user engagement with 4000+ recurring users participating
+                            in weekly events
+                        </li>
+                        <li>
+                            Implemented WebSocket functionality for real-time notifications
+                            and user activity tracking
+                        </li>
+                        <li>
+                            Developed features for seamless user profile creation and
+                            modification
+                        </li>
+                        <li>
+                            Integrated gamification mechanics using data from external APIs to
+                            enhance user experience
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <section className="flex flex-col gap-2">
+                <header>
+                    <h3 className="text-lg">Suma Wealth</h3>
+                    <a
+                        href="https://sumawealth.com/"
+                        className="underline hover:text-blue-500"
+                    >
+                        visit web
+                    </a>
+                </header>
+
+                <article>
+                    <p className="italic">
+                        &quot;I was really impressed with Cesar&apos;s development skills.
+                        He was easy to communicate with, met every deadline, and resolved
+                        issues quickly and effectively. The project went smoothly, and
+                        I&apos;m very happy with the results.&quot;
+                    </p>
+                    <p>- Mary Hernandez, Suma Wealth Co-Founder</p>
+                </article>
+
+                <section>
+                    <header>
+                        <h4 className="text-lg">Contributions:</h4>
+                    </header>
+
+                    <ul className="py-2 list-disc list-inside">
+                        <li>Maintained and optimized CI/CD pipelines</li>
+                        <li>Developed dynamic React components</li>
+                        <li>
+                            Collaborated with the design team to create pages, slides, modals,
+                            and more
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+    );
+}
 export default function Page() {
     return (
         <main>
@@ -73,104 +167,21 @@ export default function Page() {
                 </section>
             </section>
 
-            <section className="flex flex-col gap-8 pt-8 min-h-screen">
+            <section className="flex flex-col gap-8 p-12">
                 <header>
-                    <h2 className="text-3xl">My satisfied clients</h2>
+                    <h2 className="font-mono">Clients</h2>
                 </header>
 
-                <section className="flex flex-col gap-2">
-                    <header className="">
-                        <h3 className="text-lg">Cabra Sports</h3>
-                        <a href="cabragaming.com" className="underline hover:text-blue-500">
-                            visit web
-                        </a>
-                    </header>
-
+                <section>
                     <article>
-                        <p className="italic">
-                            &quot;Working with Cesar was a great experience. He handled both
-                            the front-end and back-end development efficiently, always keeping
-                            me updated and delivering quality work. I&apos;m really happy with
-                            the result and would definitely work with them again.&quot;
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Temporibus commodi, officia quisquam ratione quos quam ex a nemo
+                            porro rerum fuga maxime. Dolorem, vitae placeat. Harum quod dolore
+                            vitae rem!
                         </p>
-                        <p>- Jesus Chavez, Cabra Sports Co-Founder</p>
                     </article>
-
-                    <section>
-                        <header>
-                            <h4 className="text-lg">Contributions:</h4>
-                        </header>
-
-                        <ul className="py-2 list-disc list-inside">
-                            <li>
-                                Led the end-to-end planning, development, and maintenance of the
-                                application
-                            </li>
-                            <li>
-                                Increased user engagement with 4000+ recurring users
-                                participating in weekly events
-                            </li>
-                            <li>
-                                Implemented WebSocket functionality for real-time notifications
-                                and user activity tracking
-                            </li>
-                            <li>
-                                Developed features for seamless user profile creation and
-                                modification
-                            </li>
-                            <li>
-                                Integrated gamification mechanics using data from external APIs
-                                to enhance user experience
-                            </li>
-                        </ul>
-                    </section>
                 </section>
-
-                <section className="flex flex-col gap-2">
-                    <header>
-                        <h3 className="text-lg">Suma Wealth</h3>
-                        <a
-                            href="https://sumawealth.com/"
-                            className="underline hover:text-blue-500"
-                        >
-                            visit web
-                        </a>
-                    </header>
-
-                    <article>
-                        <p className="italic">
-                            &quot;I was really impressed with Cesar&apos;s development skills.
-                            He was easy to communicate with, met every deadline, and resolved
-                            issues quickly and effectively. The project went smoothly, and
-                            I&apos;m very happy with the results.&quot;
-                        </p>
-                        <p>- Mary Hernandez, Suma Wealth Co-Founder</p>
-                    </article>
-
-                    <section>
-                        <header>
-                            <h4 className="text-lg">Contributions:</h4>
-                        </header>
-
-                        <ul className="py-2 list-disc list-inside">
-                            <li>Maintained and optimized CI/CD pipelines</li>
-                            <li>Developed dynamic React components</li>
-                            <li>
-                                Collaborated with the design team to create pages, slides,
-                                modals, and more
-                            </li>
-                        </ul>
-                    </section>
-                </section>
-            </section>
-
-            <section className="p-12">
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
-                    dignissimos tempora temporibus! Quos, numquam vel? Aliquid
-                    perspiciatis, asperiores facere iusto, eligendi aperiam consequatur
-                    accusantium beatae magni fugit unde cupiditate temporibus.
-                </p>
             </section>
         </main>
     );

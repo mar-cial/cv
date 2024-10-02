@@ -15,7 +15,9 @@ export function CurrentDate() {
         };
     }, []);
 
-    const slicedString = currentTime?.toLocaleString().slice(-11);
+    const slicedString = currentTime
+        ?.toLocaleString("en-US", { timeZone: "America/Los_Angeles" })
+        .slice(-11);
 
     return (
         <div>
