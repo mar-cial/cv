@@ -36,7 +36,7 @@ function Card({
 
 export default function Page() {
     return (
-        <main>
+        <main className="p-12">
             <PageHeader title="Custom dashboards" />
 
             <section className="flex flex-col gap-6 pb-12">
