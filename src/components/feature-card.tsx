@@ -16,10 +16,16 @@ export function FeatureCard({
         show: {
             opacity: 1,
             height: "auto",
+            transition: {
+                when: "beforeChildren",
+            },
         },
         exit: {
             opacity: 0,
             height: 0,
+            transition: {
+                when: "afterChildren",
+            },
         },
     };
 
@@ -49,7 +55,9 @@ export function FeatureCard({
                         animate="show"
                         exit="exit"
                     >
-                        <motion.div variants={item}>{content}</motion.div>
+                        <motion.div variants={item}>
+                            <p className="text-zinc-300">{content}</p>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>

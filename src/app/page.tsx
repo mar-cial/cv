@@ -1,104 +1,11 @@
 import { CurrentDate } from "@/components/current-date";
 import { FeatureCard } from "@/components/feature-card";
+import Link from "next/link";
 
-function ClientsSection() {
-    return (
-        <section className="flex flex-col gap-8 pt-8 min-h-screen">
-            <header>
-                <h2 className="text-3xl">My satisfied clients</h2>
-            </header>
-
-            <section className="flex flex-col gap-2">
-                <header className="">
-                    <h3 className="text-lg">Cabra Sports</h3>
-                    <a href="cabragaming.com" className="underline hover:text-blue-500">
-                        visit web
-                    </a>
-                </header>
-
-                <article>
-                    <p className="italic">
-                        &quot;Working with Cesar was a great experience. He handled both the
-                        front-end and back-end development efficiently, always keeping me
-                        updated and delivering quality work. I&apos;m really happy with the
-                        result and would definitely work with them again.&quot;
-                    </p>
-                    <p>- Jesus Chavez, Cabra Sports Co-Founder</p>
-                </article>
-
-                <section>
-                    <header>
-                        <h4 className="text-lg">Contributions:</h4>
-                    </header>
-
-                    <ul className="py-2 list-disc list-inside">
-                        <li>
-                            Led the end-to-end planning, development, and maintenance of the
-                            application
-                        </li>
-                        <li>
-                            Increased user engagement with 4000+ recurring users participating
-                            in weekly events
-                        </li>
-                        <li>
-                            Implemented WebSocket functionality for real-time notifications
-                            and user activity tracking
-                        </li>
-                        <li>
-                            Developed features for seamless user profile creation and
-                            modification
-                        </li>
-                        <li>
-                            Integrated gamification mechanics using data from external APIs to
-                            enhance user experience
-                        </li>
-                    </ul>
-                </section>
-            </section>
-
-            <section className="flex flex-col gap-2">
-                <header>
-                    <h3 className="text-lg">Suma Wealth</h3>
-                    <a
-                        href="https://sumawealth.com/"
-                        className="underline hover:text-blue-500"
-                    >
-                        visit web
-                    </a>
-                </header>
-
-                <article>
-                    <p className="italic">
-                        &quot;I was really impressed with Cesar&apos;s development skills.
-                        He was easy to communicate with, met every deadline, and resolved
-                        issues quickly and effectively. The project went smoothly, and
-                        I&apos;m very happy with the results.&quot;
-                    </p>
-                    <p>- Mary Hernandez, Suma Wealth Co-Founder</p>
-                </article>
-
-                <section>
-                    <header>
-                        <h4 className="text-lg">Contributions:</h4>
-                    </header>
-
-                    <ul className="py-2 list-disc list-inside">
-                        <li>Maintained and optimized CI/CD pipelines</li>
-                        <li>Developed dynamic React components</li>
-                        <li>
-                            Collaborated with the design team to create pages, slides, modals,
-                            and more
-                        </li>
-                    </ul>
-                </section>
-            </section>
-        </section>
-    );
-}
 export default function Page() {
     return (
         <main>
-            <section className="flex flex-col justify-between p-12 h-screen">
+            <section className="flex flex-col gap-6 justify-end p-12 h-screen">
                 <header>
                     <h1 className="text-8xl">bandr.</h1>
                     <p className="text-lg text-zinc-400">build and run.</p>
@@ -169,17 +76,58 @@ export default function Page() {
 
             <section className="flex flex-col gap-8 p-12">
                 <header>
-                    <h2 className="font-mono">Clients</h2>
+                    <h2 className="font-mono">Examples</h2>
                 </header>
 
-                <section>
-                    <article>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Temporibus commodi, officia quisquam ratione quos quam ex a nemo
-                            porro rerum fuga maxime. Dolorem, vitae placeat. Harum quod dolore
-                            vitae rem!
-                        </p>
+                <section className="grid gap-4 md:grid-cols-2">
+                    <article className="flex flex-col gap-4">
+                        <header>
+                            <h3 className="text-2xl font-semibold">API Integrations</h3>
+                        </header>
+
+                        <div className="flex flex-col gap-2">
+                            <div>
+                                <p className="text-zinc-300">
+                                    We’ve worked with all kinds of APIs to bring clients exactly
+                                    what they need. Whether it’s handling authentication or
+                                    pulling data to generate custom reports, we make it happen.
+                                </p>
+                            </div>
+
+                            <div>
+                                <Link
+                                    href="/integrations"
+                                    className="text-orange-600 underline"
+                                >
+                                    Check out an example of what we can do
+                                </Link>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article className="flex flex-col gap-4">
+                        <header>
+                            <h3 className="text-2xl font-semibold">
+                                Data Collection, Cleanup & Reporting with Dynamic Dashboards
+                            </h3>
+                        </header>
+
+                        <div className="flex flex-col gap-2">
+                            <div>
+                                <p className="text-zinc-300">
+                                    We’ll help you clean up, extract, and analyze all the
+                                    important data in your database. Get real-time insights with
+                                    dynamic, visually appealing dashboards to stay on top of your
+                                    business.
+                                </p>
+                            </div>
+
+                            <div>
+                                <Link href="/dashboard" className="text-orange-600 underline">
+                                    See an example of our dashboards in action
+                                </Link>
+                            </div>
+                        </div>
                     </article>
                 </section>
             </section>
