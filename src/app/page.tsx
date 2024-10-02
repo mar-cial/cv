@@ -1,6 +1,7 @@
 import { CurrentDate } from "@/components/current-date";
 import { FeatureCard } from "@/components/feature-card";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default function Page() {
     return (
@@ -28,9 +29,9 @@ export default function Page() {
                 </div>
 
                 <div>
-                    <div>
+                    <Suspense fallback={<div>Loading</div>}>
                         <CurrentDate />
-                    </div>
+                    </Suspense>
                 </div>
             </section>
 

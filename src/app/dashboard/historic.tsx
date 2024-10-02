@@ -1,5 +1,4 @@
 "use client";
-
 import { BLUE, GREEN } from "@/data/colors";
 import { HistoricData } from "@/models/historic";
 import {

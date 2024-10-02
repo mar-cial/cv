@@ -1,13 +1,6 @@
 "use client";
 
-import {
-    Cell,
-    Legend,
-    RadialBar,
-    RadialBarChart,
-    ResponsiveContainer,
-    Tooltip,
-} from "recharts";
+import { Cell, RadialBar, RadialBarChart, ResponsiveContainer } from "recharts";
 
 const data = [
     {

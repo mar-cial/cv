@@ -1,5 +1,5 @@
 "use client";
-import { Legend, ResponsiveContainer, Sankey, Tooltip } from "recharts";
+import { ResponsiveContainer, Sankey, Tooltip } from "recharts";
 
 const data0 = {
     nodes: [

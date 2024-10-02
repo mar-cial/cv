@@ -1,5 +1,4 @@
 "use client";
-
 import { scatterData } from "@/data/scatter";
 import { ScatterData } from "@/models/scatter";
 import {
