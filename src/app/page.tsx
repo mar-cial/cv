@@ -21,7 +21,7 @@ export default function Page() {
 
                 <div>
                     <a
-                        href="mailto:cesarmarcialq@gmail.com"
+                        href="mailto:cesar@bandr.digital"
                         className="py-2 px-8 text-xl font-bold bg-orange-600 rounded-md"
                     >
                         Contact us

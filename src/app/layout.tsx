@@ -28,7 +28,7 @@ export default function RootLayout({
                     <p>You ready to get started? Share us your project.</p>
                     <a
                         className="py-1 px-4 font-semibold text-center bg-orange-600 rounded-md"
-                        href="mailto:cesar@bandr.com"
+                        href="mailto:cesar@bandr.digital"
                     >
                         Send us a message
                     </a>
