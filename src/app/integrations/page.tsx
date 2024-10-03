@@ -6,7 +6,7 @@ import PageHeader from "@/components/page-header";
 
 export default function Page() {
     return (
-        <main className="p-12">
+        <main className="p-8">
             <PageHeader title="API Integrations" />
 
             <section>

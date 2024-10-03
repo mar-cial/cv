@@ -56,7 +56,7 @@ export function FeatureCard({
                         exit="exit"
                     >
                         <motion.div variants={item}>
-                            <p className="text-zinc-300">{content}</p>
+                            <p className="dark:text-zinc-300">{content}</p>
                         </motion.div>
                     </motion.div>
                 )}
