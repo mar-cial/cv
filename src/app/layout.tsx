@@ -18,7 +18,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${inter.className} `}>
-                <nav className="flex fixed top-6 left-6 z-50 w-24 bg-white">
+                <nav className="flex fixed top-6 left-6 z-50 w-24 bg-white dark:bg-zinc-800">
                     <Link href="/" className="flex-1 pl-4 w-full h-full font-mono">
                         home
                     </Link>
